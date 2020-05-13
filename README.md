@@ -39,13 +39,13 @@ All tests should be written in the test folder.
 - Lint: `composer run php-cs-fixer`
 
 ## Authors
-<li>Mbugua Ellen</li>
-<li>Tume Elema</li>
-<li>Odero George</li>
-<li>Warui</li>
-<li>Vincent</li>
-<li>Purity</li>
-<li>Kevin raphael</li>
+<li>Mbugua Ellen</li><a href="mbuguaellen"></a>
+<li>Tume Elema</li><a href="Tume09"></a>
+<li>Odero Oluoch</li><a href="0deroOluoch"></a>
+<li>Francis Kinyuru</li><a href="franciskinyuru"></a>
+<li>Vincent</li><a href="vgichira"></a>
+<li>Purity Nyakundi</li><a href="PurityNyakundi"></a>
+<li>Kevin raphael</li><a href="Kay-raph"></a>
 
 ## Contributing
 If this project sounds interesting to you and you'd like to contribute, thank you!
