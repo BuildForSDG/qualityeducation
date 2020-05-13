@@ -14,7 +14,7 @@
     <link
         href="https://fonts.googleapis.com/css?family=Alfa+Slab+One|Amaranth|Anton|Baloo|Baloo+Bhai|Bowlby+One+SC|Calistoga|Concert+One|Fredoka+One|Fugaz+One|IBM+Plex+Mono|Modak|Pangolin|Rubik+Mono+One|Special+Elite|Varela+Round|Viga&display=swap"
         rel="stylesheet">
-    <link href="Assets\css\styles.css" rel="stylesheet" type="text/css">
+    <link href="assets\css\styles.css" rel="stylesheet" type="text/css">
     <link rel="icon" href="">
     <script src="js\script.js"></script>
     <title>FUNDISHA</title>
@@ -166,32 +166,33 @@
     </div> -->
     <nav>
         
-        <span style="font-size:30px;cursor:pointer" onclick="openNav()"><a href="index.html"><img src="logos/hm.png"></a></span>
+        <span style="font-size:30px;cursor:pointer" onclick="openNav()"><a href="index.html"><img src="assets/logos/hm.png"></a></span>
     </nav>
     <h1>FUNDISHA</h1>
     <div class="signin">
         <p1><a href="#"> SIGN IN</a></p1>
-        <p2><a href="#">SIGN UP</a></p2>
+        <p2><a href="signUp.html">SIGN UP</a></p2>
 
     </div>
     <div class="login">
         <center>
-            <div class="form-box">
-                <form class="col-sm-6 offset-sm-3 text-center"><br>
-                    <div class="input-group">
+                <form><br>
+                    <!-- <div class="input-group">
                         <input id="usern" type="email/text" style="color: honeydew; " placeholder="Email or Username"
-                            required autofocus autocomplete>
+                            required autofocus autocomplete=on>
                         <input id="psi" type="password" style="color: honeydew;" placeholder="Password" required>
-                    </div>
+                    </div> -->
+                    <input type="text" id="usern" placeholder="Email or username" required autocomplete="on">
+                    <br><br>
+                    <input type="password" id="psi" placeholder="Enter password" required><br><br>
                     <button type="submit" class="submit-btn"><a style="text-decoration: none; color: #03396c;"
-                            href="#"><b>LOG IN</b></a></button>
+                            href="#"><b>LOG IN</b></a></button><br>
                     <a href="#">
                         <div class="frg">
                             <p><b>Forgot Password?</b></p>
                     </a>
 
                     <p3>OR</p3>
-            </div>
             <div class="logi">
                 <a href="#" class="fb btn">
                     <i class="fa fa-facebook fa-fw"></i>facebook
@@ -200,12 +201,10 @@
                 <a href="#" class="google btn"><i class="fa fa-google fa-fw">google
                     </i>
                 </a>
-            </div>
-            <!-- <p style="color: white;"><b>or</b></p> -->
-            <!--         
+            </div>  <br><br><br><br>    
                     <div class="cr" id="#cr"><a href="signup.html">
-                            <p><b>Create an Account</b></p>
-                        </a></div> -->
+                            <p><b>Don't have an Account?Create One</b></p>
+                        </a></div>
             </form>
         </center>
     </div>
@@ -216,15 +215,15 @@
             <div class="colu">
                 <div class="row">
                     <div class="column">
-                        <a href="#call"><img src="logos\pne.png"><b>
+                        <a href="#call"><img src="src/icons/pne.png"><b>
                                 <p> +254701255700
                             </b></p></a>
     
-                        <a href="#email"><img src="logos\email.png">
+                        <a href="#email"><img src="assets/logos/email.png">
                             <p><b> info@fundisha.co.ke</b></p>
                         </a>
     
-                        <a href="#location"><img src="logos\loca.png">
+                        <a href="#location"><img src="assets/logos/loca.png">
                             <p><b> 1st floor Avenue Towers Nairobi</b></p>
                         </a>
     
