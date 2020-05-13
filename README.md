@@ -43,7 +43,7 @@ All tests should be written in the test folder.
 <li><a href="Tume09">Tume Elema</a></li>
 <li><a href="0deroOluoch">Odero Oluoch</a></li>
 <li><a href="franciskinyuru">Francis Kinyuru</a></li>
-<li><a href="vgichira">Vincent</a></li>
+<li><a href="https://github.com/vgichira">Vincent</a></li>
 <li><a href="PurityNyakundi">Purity Nyakundi</a></li>
 <li><a href="Kay-raph">Kevin raphael</a></li>
 
