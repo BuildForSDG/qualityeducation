@@ -39,8 +39,13 @@ All tests should be written in the test folder.
 - Lint: `composer run php-cs-fixer`
 
 ## Authors
-
-List the team behind this project. Their names linked to their Github, LinkedIn, or Twitter accounts should siffice. Ok to signify the role they play in the project, including the TTL and mentor
+<li>Mbugua Ellen</li>
+<li>Tume Elema</li>
+<li>Odero George</li>
+<li>Warui</li>
+<li>Vincent</li>
+<li>Purity</li>
+<li>Kevin raphael</li>
 
 ## Contributing
 If this project sounds interesting to you and you'd like to contribute, thank you!
