@@ -27,7 +27,6 @@ html{
     float: right;
     height: 30px;
 }
-
 .navbar{
     position: relative;
     position: scroll;
@@ -53,7 +52,7 @@ html{
     margin-top: 10px;
 } */
 .navbar p{
-    margin: 15px;
+    margin: 38px;
     margin-top: 15px;
     float: right;
     color: #e2af6d;
@@ -102,7 +101,7 @@ h1{
 }
 .sidenav img{
     margin: auto;
-    padding: 30px 15px;
+    padding: 20px 15px;
     height: 30px;
     display: block;
 }
@@ -136,6 +135,13 @@ h1{
   -ms-border-radius: 10px 10px 0px 0px;
   -o-border-radius: 10px 10px 0px 0px;
 }
+.jobs img{
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
 
 .overlay {
   position: absolute;
@@ -143,7 +149,7 @@ h1{
   background: #e2af6d;
   background: #e2af6d;
   /*Blacksee-through*/opacity: 75%;
-  width: 310px;
+  width: 350px;
   color: white;
   font-size: 20px;
   font-weight: bold;
@@ -191,6 +197,7 @@ hr{
     width: 450px;
     letter-spacing: 3px;
     text-align: center;
+    text-decoration: none;
     color: white;
     border-radius: 10px;
     -webkit-border-radius: 10px;
@@ -208,6 +215,9 @@ hr{
     margin-left: 20px;
     width: 80%;
     padding: 10px;
+}
+.gallery a{
+    text-decoration: none;
 }
 .descr{
     font-weight: bold;
@@ -275,17 +285,19 @@ hr{
 /*FORM*/
 .signin
 {
-     display: flex;
+    display: flex;
     text-align: center;
    justify-content: space-between;
 }
 p1 a{ 
     text-decoration: none;
-    margin-left: 450px;
     font-size: 2vw;
     color: white;
+    margin-left: 450px;
 }
 p1 a:hover{
+    color: white;
+    text-decoration: none;
     border-bottom:solid #e2af6d;
      transition: ease-in 0.1s;
     -webkit-transition: ease-in 0.1s;
@@ -300,6 +312,8 @@ p2 a{
     margin-right: 450px;
 }
 p2 a:hover{
+    color: white;
+    text-decoration: none;
     border-bottom:solid #e2af6d;
     transition: ease-in 0.1s;
     -webkit-transition: ease-in 0.1s;
@@ -308,14 +322,16 @@ p2 a:hover{
     -o-transition: ease-in 0.1s;
 }
 /*sign in form*/
+.form-box input{
+    width: 100%;
+}
 #usern {
     background-color: #e2af6d;
-    display: block;
-  width: 35%;
+  width: 40%;
   font-size: smaller;
   text-align: center;
   outline: none !important;
-  margin: 30px;
+  margin: 10px;
   padding: 15px;
   border-radius: 5px;
   -webkit-border-radius: 25px;
@@ -325,12 +341,11 @@ p2 a:hover{
 }
 #psi {
     background-color: #e2af6d;
-    display: block;
-  width: 35%;
+  width: 40%;
   font-size: smaller;
   text-align: center;
   outline: none !important;
-  margin: 30px;
+  margin: 10px;
   padding: 15px;
   border-radius: 25px;
   -webkit-border-radius: 25px;
@@ -455,10 +470,10 @@ font-size: small;
 margin-top: 15px;
 }
 .header img{
- margin: 10px;
+ margin: 8px;
     margin-top: 15px;
     float: right;
-    height: 20px;
+    height: 15px;
 }
 .navbar{
     margin-top: 30px;
@@ -505,7 +520,7 @@ nav img{
 }
 .sidenav img{
     margin: auto;
-    padding: 10px 2px;
+    padding: 25px 2px;
     height: 20px;
     display: block;
 }
@@ -530,14 +545,17 @@ nav img{
   -ms-border-radius: 10px 10px 0px 0px;
   -o-border-radius: 10px 10px 0px 0px;
 }
-
+.jobs h3,
+.courses h3{
+    font-size: small;
+}
 .overlay {
   position: absolute;
   bottom: 0;
   background: #e2af6d;
   background: #e2af6d;
   /*Blacksee-through*/opacity: 75%;
-  width: 90px;
+  width: 110px;
   color: white;
   font-size: 10px;
   font-weight: bold;
@@ -550,18 +568,19 @@ nav img{
     -o-transition: ease-in-out 0.3;
 }
 .partn h3{
-    padding: 10px;
+  font-size: small;
+    padding: 5px;
     background-color: #03396c;
     opacity: 95%;
     width: 200px;
     letter-spacing: 3px;
     text-align: center;
     color: white;
-    border-radius: 10px;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    -ms-border-radius: 10px;
-    -o-border-radius: 10px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
 }
 .descr{
     margin-left: 20px;
@@ -571,7 +590,7 @@ nav img{
     text-align: center;
     color: white;
     background-color: #e2af6d;
-    width: 90px;
+    width: 110px;
     border-radius: 5px;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
@@ -584,8 +603,8 @@ nav img{
     width: 150px;
 }
 .gallery img {
-    margin-left: 30px;
-    width: 40%;
+    margin-left: 35px;
+    width: 50%;
 }
 .signin
 {
@@ -606,11 +625,11 @@ p2 a{
     margin-right: 80px;
 }
 #usern{
-    width: 200px;
+    width: 300px;
     padding: 2px;
 }
 #psi{
-    width: 200px;
+    width: 300px;
     padding: 2px;
 }
 .submit-btn{
@@ -639,7 +658,7 @@ p2 a{
      padding: 4px;
 }
 .colu{
-    margin-left: 0px;
+    margin-left: 30px;
 }
  /* Create three equal columns that floats next to each other */
     .column {
@@ -734,7 +753,7 @@ h1{
     z-index: 1;
     top: 10px;
     overflow-x: hidden;
-    padding: 5px 0;
+    padding: 20px 0;
     margin: 0px 0;
     border-radius: 0 10px 10px 0;
     -webkit-border-radius: 0 10px 10px 0;
@@ -745,7 +764,7 @@ h1{
 .sidenav img{
     margin: auto;
     padding: 10px 2px;
-    height: 15px;
+    height: 10px;
     display: block;
 }
 .contain{
@@ -754,7 +773,7 @@ h1{
 .container {
     display: inline-block;
     margin: 15px;
-    margin-left: 20px;
+    margin-left: 10px;
   position: relative;
   width: 20%;
   max-width: 120px;
@@ -776,7 +795,7 @@ h1{
   background: #e2af6d;
   background: #e2af6d;
   /*Blacksee-through*/opacity: 75%;
-  width: 50px;
+  width: 70px;
   color: white;
   font-size: 8px;
   font-weight: bold;
@@ -806,7 +825,7 @@ h1{
 .descr{
     margin-left: 20px;
     font-weight: bold;
-    font-size: 8px;
+    font-size: 5px;
     padding: 2px;
     text-align: center;
     color: white;
@@ -818,6 +837,10 @@ h1{
     -ms-border-radius: 5px;
     -o-border-radius: 5px;
 }
+.courses h3,
+.jobs h3{
+    font-size: small;
+}
 .gallery{
     margin: 1px;
     display: inline-block;
@@ -825,7 +848,7 @@ h1{
 }
 .gallery img {
     margin-left: 30px;
-    width: 40%;
+    width: 60%;
 }
 .signin
 {
@@ -846,11 +869,11 @@ p2 a{
     margin-right: 80px;
 }
 #usern{
-    width: 200px;
+    width: 250px;
     padding: 2px;
 }
 #psi{
-    width: 200px;
+    width: 250px;
     padding: 2px;
 }
 .submit-btn{
@@ -879,7 +902,7 @@ p2 a{
      padding: 4px;
 }
 .colu{
-    margin-left: 10px;
+    margin-left: 25px;
 }
  /* Create three equal columns that floats next to each other */
     .column {
