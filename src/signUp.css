@@ -147,9 +147,76 @@ p2 a:hover{
     -o-border-radius: 5px;
 }
 .cr a{
+    text-align: center;
     text-decoration: none;
     color: #e2af6d;
 }
 .cr a:hover{
     color: white;
+}
+
+/*media screen*/
+@media screen and (max-width: 500px) {
+    nav img{
+    height: 45px;
+    margin: 15px;
+}
+    p1 a{ 
+    text-decoration: none;
+    margin-left: 80px;
+    font-size: small;
+    color: white;
+}
+p2 a{
+    text-decoration: none;
+    font-size: small;
+    color: white;
+    margin-right: 80px;
+}
+#password,
+#cpassword,
+#fname,
+#lname,
+#tele,
+#email{
+      background-color: #e2af6d;
+  width: 60%;
+  font-size: smaller;
+  text-align: center;
+  outline: none !important;
+  margin: 10px;
+  padding: 5px;
+  border-radius: 5px;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+.fb{
+    margin-left: 50px;
+    width: 20%;
+     padding: 4px;
+}
+.google{
+    margin-right: 50px;
+     width: 20%;
+     padding: 4px;
+}
+.submit-btn {
+    text-align: center;
+    font-size: x-small;
+    border: 0;
+    width: 100px;
+    color: white;
+    text-decoration: none;
+    outline: none !important;
+    padding: 5px;
+    background-color:#e2af6d;
+    cursor: pointer;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
 }
