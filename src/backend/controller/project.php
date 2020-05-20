@@ -7,7 +7,6 @@ use Illuminate\Http\Request;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Response;
 class project extends Controller{
-    //controller file key to connection between the frontend and model
 	function index(){
 		return view('project.index');
 	}
@@ -18,11 +17,6 @@ class project extends Controller{
 		return view('project.signUp');
 	}
 	function signin(Request $Request){
-		$Request->flash();
-		$Request->validate([
-			'email'=>'required',
-			'password'=>'required|min:6'
-		]);
 		$check=connect::check([
 			'email'=>$Request->input('email')]);
 		if (count($check)>0) {
@@ -32,15 +26,21 @@ $Request->session()->flash("status","User Arleady exists");
 		}else{
 			$insert=connect::signin([
 				'email'=>$Request->input('email'),
-				'password'=>md5($Request->input('password'))
+				'password'=>md5($Request->input('pwd')),
+				'firstname'=>$Request->input('faname'),
+				'lastname'=>$Request->input('laname'),
+				'mobile'=>$Request->input('tel'),
+				'country'=>$Request->input('country'),
+				'gender'=>$Request->input('gender'),
+				'DOB'=>$Request->input('dob')
 
 			]);if ($insert) {
 				$Request->session()->flash("status","Account created successfully Login To continue");
-                    return back();
+                     return view('project.login'); 
 			}
 			else{
 $Request->session()->flash("status","Failed to create account");
-                    return back();	
+                    //return back();	
 			}
 		}
 	}

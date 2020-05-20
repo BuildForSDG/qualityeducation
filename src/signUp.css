@@ -1,61 +1,61 @@
 body{
-     scroll-behavior: smooth;
-    background-color: #03396c;
-    margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    scroll-behavior: smooth;
+   background-color: #03396c;
+   margin: 0;
+   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 nav img{
-    height: 65px;
-    margin: 15px;
+   height: 65px;
+   margin: 15px;
 }
 h1{
-    color: white;
-    text-align: center;
-    margin-top: -30px;
-    font-size: 4vw;
-    letter-spacing: 3px;
+   color: white;
+   text-align: center;
+   margin-top: -30px;
+   font-size: 4vw;
+   letter-spacing: 3px;
 }
 /*FORM*/
 .signup
 {
-    display: flex;
-    text-align: center;
-   justify-content: space-between;
+   display: flex;
+   text-align: center;
+  justify-content: space-between;
 }
 p1 a{ 
-    text-decoration: none;
-    font-size: 2vw;
-    color: white;
-    margin-left: 450px;
+   text-decoration: none;
+   font-size: 2vw;
+   color: white;
+   margin-left: 450px;
 }
 p1 a:hover{
-    color: white;
-    text-decoration: none;
-    border-bottom:solid #e2af6d;
-     transition: ease-in 0.1s;
-    -webkit-transition: ease-in 0.1s;
-    -moz-transition: ease-in 0.1s;
-    -ms-transition: ease-in 0.1s;
-    -o-transition: ease-in 0.1s;
+   color: white;
+   text-decoration: none;
+   border-bottom:solid #e2af6d;
+    transition: ease-in 0.1s;
+   -webkit-transition: ease-in 0.1s;
+   -moz-transition: ease-in 0.1s;
+   -ms-transition: ease-in 0.1s;
+   -o-transition: ease-in 0.1s;
 }
 p2 a{
-    text-decoration: none;
-    font-size: 2vw;
-    color: white;
-    margin-right: 450px;
+   text-decoration: none;
+   font-size: 2vw;
+   color: white;
+   margin-right: 450px;
 }
 p2 a:hover{
-    color: white;
-    text-decoration: none;
-    border-bottom:solid #e2af6d;
-    transition: ease-in 0.1s;
-    -webkit-transition: ease-in 0.1s;
-    -moz-transition: ease-in 0.1s;
-    -ms-transition: ease-in 0.1s;
-    -o-transition: ease-in 0.1s;
+   color: white;
+   text-decoration: none;
+   border-bottom:solid #e2af6d;
+   transition: ease-in 0.1s;
+   -webkit-transition: ease-in 0.1s;
+   -moz-transition: ease-in 0.1s;
+   -ms-transition: ease-in 0.1s;
+   -o-transition: ease-in 0.1s;
 }
 .form-box input{
-    width: 100%;
+   width: 100%;
 }
 #usern,
 #password,
@@ -63,115 +63,115 @@ p2 a:hover{
 #fname,
 #lname,
 #tele,
-#email {
-    background-color: #e2af6d;
-  width: 40%;
-  font-size: smaller;
-  text-align: center;
-  outline: none !important;
-  margin: 10px;
-  padding: 10px;
-  border-radius: 5px;
-  -webkit-border-radius: 25px;
-  -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -o-border-radius: 5px;
+#email,#dob,#gender1,#country {
+   background-color: #e2af6d;
+ width: 40%;
+ font-size: smaller;
+ text-align: center;
+ outline: none !important;
+ margin: 10px;
+ padding: 10px;
+ border-radius: 5px;
+ -webkit-border-radius: 25px;
+ -moz-border-radius: 5px;
+ -ms-border-radius: 5px;
+ -o-border-radius: 5px;
 }
 .submit-btn {
-    text-align: center;
-    border: 0;
-    width: 150px;
-    color: white;
-    text-decoration: none;
-    outline: none !important;
-    padding: 10px;
-    background-color:#e2af6d;
-    cursor: pointer;
-    border-radius: 25px;
-    -webkit-border-radius: 25px;
-    -moz-border-radius: 25px;
-    -ms-border-radius: 25px;
-    -o-border-radius: 25px;
+   text-align: center;
+   border: 0;
+   width: 150px;
+   color: white;
+   text-decoration: none;
+   outline: none !important;
+   padding: 10px;
+   background-color:#e2af6d;
+   cursor: pointer;
+   border-radius: 25px;
+   -webkit-border-radius: 25px;
+   -moz-border-radius: 25px;
+   -ms-border-radius: 25px;
+   -o-border-radius: 25px;
 }
 
 .submit-btn:hover {
-    background-color: darkgray;
+   background-color: darkgray;
 }
 .submit-btn a:hover{
-    color: white;
+   color: white;
 }
 
 .fb{
-      margin-left: 280px;
-    float: left;
-    background-color: #3B5998;
-    text-decoration: none;
-    color: white;
-    width: 20%;
-    padding: 15px;
-    border-radius: 25px;
-    -webkit-border-radius: 25px;
-    -moz-border-radius: 25px;
-    -ms-border-radius: 25px;
-    -o-border-radius: 25px;
+     margin-left: 280px;
+   float: left;
+   background-color: #3B5998;
+   text-decoration: none;
+   color: white;
+   width: 20%;
+   padding: 15px;
+   border-radius: 25px;
+   -webkit-border-radius: 25px;
+   -moz-border-radius: 25px;
+   -ms-border-radius: 25px;
+   -o-border-radius: 25px;
 }
 .fb:hover, .google:hover{
-    opacity: 0.6;
+   opacity: 0.6;
 }
 
-  .google {
-      margin-right: 280px;
-      float: right;
-    background-color: #dd4b39;
-    text-decoration: none;
-    color: white;
-    width: 20%; 
-    padding: 15px;
-     border-radius: 25px;
-    -webkit-border-radius: 25px;
-    -moz-border-radius: 25px;
-    -ms-border-radius: 25px;
-    -o-border-radius: 25px;
-  }
+ .google {
+     margin-right: 280px;
+     float: right;
+   background-color: #dd4b39;
+   text-decoration: none;
+   color: white;
+   width: 20%; 
+   padding: 15px;
+    border-radius: 25px;
+   -webkit-border-radius: 25px;
+   -moz-border-radius: 25px;
+   -ms-border-radius: 25px;
+   -o-border-radius: 25px;
+ }
 .frg p3{
-    color: white;
-    font-size: 1.5em;
+   color: white;
+   font-size: 1.5em;
 }
 .coun,
 .gender{
-    color: white;
-    border-radius: 5px;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    -ms-border-radius: 5px;
-    -o-border-radius: 5px;
+   color: white;
+   border-radius: 5px;
+   -webkit-border-radius: 5px;
+   -moz-border-radius: 5px;
+   -ms-border-radius: 5px;
+   -o-border-radius: 5px;
 }
 .cr a{
-    text-align: center;
-    text-decoration: none;
-    color: #e2af6d;
+   text-align: center;
+   text-decoration: none;
+   color: #e2af6d;
 }
 .cr a:hover{
-    color: white;
+   color: white;
 }
 
 /*media screen*/
 @media screen and (max-width: 500px) {
-    nav img{
-    height: 45px;
-    margin: 15px;
+   nav img{
+   height: 45px;
+   margin: 15px;
 }
-    p1 a{ 
-    text-decoration: none;
-    margin-left: 80px;
-    font-size: small;
-    color: white;
+   p1 a{ 
+   text-decoration: none;
+   margin-left: 80px;
+   font-size: small;
+   color: white;
 }
 p2 a{
-    text-decoration: none;
-    font-size: small;
-    color: white;
-    margin-right: 80px;
+   text-decoration: none;
+   font-size: small;
+   color: white;
+   margin-right: 80px;
 }
 #password,
 #cpassword,
@@ -179,44 +179,43 @@ p2 a{
 #lname,
 #tele,
 #email{
-      background-color: #e2af6d;
-  width: 60%;
-  font-size: smaller;
-  text-align: center;
-  outline: none !important;
-  margin: 10px;
-  padding: 5px;
-  border-radius: 5px;
-  -webkit-border-radius: 25px;
-  -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -o-border-radius: 5px;
+     background-color: #e2af6d;
+ width: 60%;
+ font-size: smaller;
+ text-align: center;
+ outline: none !important;
+ margin: 10px;
+ padding: 5px;
+ border-radius: 5px;
+ -webkit-border-radius: 25px;
+ -moz-border-radius: 5px;
+ -ms-border-radius: 5px;
+ -o-border-radius: 5px;
 }
 .fb{
-    margin-left: 50px;
-    width: 20%;
-     padding: 4px;
+   margin-left: 50px;
+   width: 20%;
+    padding: 4px;
 }
 .google{
-    margin-right: 50px;
-     width: 20%;
-     padding: 4px;
+   margin-right: 50px;
+    width: 20%;
+    padding: 4px;
 }
 .submit-btn {
-    text-align: center;
-    font-size: x-small;
-    border: 0;
-    width: 100px;
-    color: white;
-    text-decoration: none;
-    outline: none !important;
-    padding: 5px;
-    background-color:#e2af6d;
-    cursor: pointer;
-    border-radius: 20px;
-    -webkit-border-radius: 20px;
-    -moz-border-radius: 20px;
-    -ms-border-radius: 20px;
-    -o-border-radius: 20px;
-}
+   text-align: center;
+   font-size: x-small;
+   border: 0;
+   width: 100px;
+   color: white;
+   text-decoration: none;
+   outline: none !important;
+   padding: 5px;
+   background-color:#e2af6d;
+   cursor: pointer;
+   border-radius: 20px;
+   -webkit-border-radius: 20px;
+   -moz-border-radius: 20px;
+   -ms-border-radius: 20px;
+   -o-border-radius: 20px;
 }

@@ -8,7 +8,13 @@ class connect extends Model
     public static function signin(array $data){
     	 $email=$data['email'];
         $password=$data['password'];
-        $res=DB::insert("insert into users(email,password) values('$email','$password')");
+        $firstname=$data['firstname'];
+        $lastname=$data['lastname'];
+        $DOB=$data['DOB'];
+        $gender=$data['gender'];
+        $mobile=$data['mobile'];
+        $country=$data['country'];
+        $res=DB::insert("insert into users(email,password,firstname,lastname,DOB,gender,mobile,country) values('$email','$password','$firstname','$lastname','$DOB','$gender','$mobile','$country')");
         return $res;
     }
     public static function check(array $data){
