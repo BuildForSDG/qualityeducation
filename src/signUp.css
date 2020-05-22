@@ -101,38 +101,40 @@ p2 a:hover{
    color: white;
 }
 
-.fb{
-     margin-left: 280px;
-   float: left;
-   background-color: #3B5998;
-   text-decoration: none;
-   color: white;
-   width: 20%;
-   padding: 15px;
-   border-radius: 25px;
-   -webkit-border-radius: 25px;
-   -moz-border-radius: 25px;
-   -ms-border-radius: 25px;
-   -o-border-radius: 25px;
+.logi #faceb{
+    font-weight: 500;
+    font-size: 2rem;
+    margin-left: 300px;
+    float: left;
+    background-color: transparent;
+    text-decoration: none;
+    color: white;
+    outline: none;
+    width: 10%;
+    padding: 15px;
+    border-radius: 35px;
+    -webkit-border-radius: 35px;
+    -moz-border-radius: 35px;
+    -ms-border-radius: 35px;
+    -o-border-radius: 35px;
 }
-.fb:hover, .google:hover{
-   opacity: 0.6;
-}
-
- .google {
-     margin-right: 280px;
-     float: right;
-   background-color: #dd4b39;
-   text-decoration: none;
-   color: white;
-   width: 20%; 
-   padding: 15px;
-    border-radius: 25px;
-   -webkit-border-radius: 25px;
-   -moz-border-radius: 25px;
-   -ms-border-radius: 25px;
-   -o-border-radius: 25px;
- }
+  .logi #goog {
+      font-weight: 500;
+      font-size: 2rem;
+      margin-right: 300px;
+      float: right;
+    background-color: transparent;
+    text-decoration: none;
+    color: white;
+      outline: none;
+    width: 10%; 
+    padding: 15px;
+     border-radius: 35px;
+    -webkit-border-radius: 35px;
+    -moz-border-radius: 35px;
+    -ms-border-radius: 35px;
+    -o-border-radius: 35px;
+  }
 .frg p3{
    color: white;
    font-size: 1.5em;
@@ -192,15 +194,17 @@ p2 a{
  -ms-border-radius: 5px;
  -o-border-radius: 5px;
 }
-.fb{
+.logi #faceb{
    margin-left: 50px;
    width: 20%;
     padding: 4px;
+    font-size: 15px;
 }
-.google{
+.logi #goog{
    margin-right: 50px;
     width: 20%;
     padding: 4px;
+    font-size: 15px;
 }
 .submit-btn {
    text-align: center;
@@ -218,4 +222,19 @@ p2 a{
    -moz-border-radius: 20px;
    -ms-border-radius: 20px;
    -o-border-radius: 20px;
+}
+}
+@media screen and (max-width: 500px) {
+.logi #faceb{
+   font-size: small;
+   margin-left: 50px;
+   width: 25%;
+    padding: 4px;
+}
+.logi #goog{
+   font-size: small;
+   margin-right: 50px;
+    width: 25%;
+    padding: 4px;
+}
 }
