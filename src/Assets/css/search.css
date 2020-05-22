@@ -3,6 +3,7 @@
 }
 
  .search-container input[type=text] {
+   background-color: #e2af6d;
   padding: 6px;
   margin-top: 15px;
   font-size: 15px;
