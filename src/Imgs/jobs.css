@@ -8,7 +8,7 @@
     left: 0;
     background-color: transparent;
     overflow-x: hidden;
-    padding-top: 10px;
+    padding-top: 0px;
     margin: 20px;
     border-right: solid #e2af6d 3px;
     
@@ -20,15 +20,21 @@
     font-size: 25px;
     color: white;
     display: block;
+    transition: ease-in-out .3s;
 }
 .sidenav img{
+    position: relative;
     height: 65px;
     text-align: center;
     transition: none;
-    top: 20px;
+    top: -20px;
 }
 .sidenav img:hover{
     transition: none;
+}
+.sidenav p{
+    color: white;
+    transition: ease-in-out .3s;
 }
 .sidenav p:hover {
     color: #e2af6d;
@@ -39,7 +45,12 @@
 .main {
     margin-left: 200px; /* Same as the width of the sidenav */
     margin-top: 10px;
-
+}
+.main2{
+    float: right;
+    width: 42%;
+    margin-top: -630px;
+    margin-right: 10px;
 }
 .nav{
     width: 53%;
@@ -146,6 +157,109 @@
 }
 .french p{
     text-align: center;
+}
+.progr{
+    width: 100%;
+    height: 260px;
+    background-color: #e2af6d;
+    border-radius: 20px;
+    -webkit-box-shadow: 0 0 5px 3px #fff;
+    -moz-box-shadow: 0 0 5px 3px #fff;
+    box-shadow: 0 0 5px 3px #fff;
+}
+.mag p1{
+    color: white;
+    font-weight: 300;
+    padding: 12px;
+    font-size: 25px;
+    
+}
+.mag p2{
+    margin-left: 300px;
+    color: #03396c;
+    
+}
+.btn1{
+    display: block;
+    margin-left: 130px;
+    width: 150px;
+    height: 12px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+p3{
+    color: #03396c;
+   display: block;
+   margin-left: 130px;
+   margin-top: -50px; 
+   font-family: 'Roboto';
+}
+p4{
+    color: #03396c;
+    display: block;
+    margin-left: 300px;
+    margin-top: -18px; 
+    font-family: 'Roboto';
+}
+.mag img{
+    display: block;
+    margin-left: 25px;
+    height: 70px;
+    width: 70px;
+    border-radius: 20px;
+    -webkit-box-shadow: 0 0 3px 1px #fff;
+    -moz-box-shadow: 0 0 3px 1px #fff;
+    box-shadow: 0 0 3px 1px #fff;
+}
+.achie{
+    width: 100%;
+    height: 345px;
+    background-color: #e2af6d;
+    border-radius: 20px;
+    -webkit-box-shadow: 0 0 5px 3px #fff;
+    -moz-box-shadow: 0 0 5px 3px #fff;
+    box-shadow: 0 0 5px 3px #fff;
+}
+.magr p1{
+    color: white;
+    font-weight: 300;
+    padding: 12px;
+    font-size: 25px;
+}
+.magr p2{
+    float: right;
+    color: #03396c;
+    margin: 10px;
+}
+.magr img{
+    display: block;
+    margin-left: 25px;
+    height: 120px;
+    width: 120px;
+}
+.magr p3{
+        color: #03396c;
+       display: block;
+       margin-left: 140px;
+       margin-top: -90px; 
+       font-family: 'Roboto';
+       font-size: 20px;
+}
+.magr p4{
+    color: white;
+    display: block;
+    margin-left: 230px;
+    margin-top: 10px; 
+    font-family: 'Roboto';
+    font-size: 20px;
+}
+.magr #str{
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    margin: 5px;
+    left: 195px;
+    position: relative;
 }
 @media screen and (max-width: 500px) {
     .nav input[type=text] {
