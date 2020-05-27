@@ -76,6 +76,134 @@ font-family:'Quicksand';
 left: 150px;
 top: 100px;
 }
+@media screen and (max-width: 500px) {
+.secteach{
+        position: relative;
+    background-image: url("imgs/lockers.jpg");
+    background-size: cover;
+    width: 65%;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 10px;
+    display: inline-block;
+    height: 100px;
+    }
+        .elem{
+        position: relative;
+    background-image: url("imgs/blackboard.jpg");
+    background-size: cover;
+    width: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 10px;
+    margin-top: -140px;
+    float: right;
+    margin-right: -45px;
+    height: 100px;
+    }
+    .french{
+        display: inline-block;
+        background-image: url("imgs/eiffel.jpg");
+        background-size: cover;
+    width: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 10px;
+    height: 100px;
+    margin-top: -20px;
+    position: relative;
+    }
+    .lec{
+        position: relative;
+    background-image: url("imgs/grad.jpg");
+    background-size: cover;
+    width: 65%;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 10px;
+    margin-left: 120px;
+    margin-top: -100px;
+    height: 100px;
+    }
+    .lec p{
+        position: relative;
+    text-align: justify;
+    color: white;
+    font-family:'Quicksand';
+    left: 40px;
+    top: 60px;
+    font-size: 7px;
+    }
+    .white{
+        height: 60px;
+    }
+}
+@media screen and (max-width: 500px) {
+    .secteach{
+        position: relative;
+    background-image: url("imgs/lockers.jpg");
+    background-size: cover;
+    width: 110%;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 10px;
+    display: inline-block;
+    height: 70px;
+    margin-top: -10px;
+    }
+        .elem{
+        position: relative;
+    background-image: url("imgs/blackboard.jpg");
+    background-size: cover;
+    width: 110%;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 10px;
+    display: block;
+    float: left;
+    height: 70px;
+    margin-top: -50px;
+    }
+    .french{
+        display: inline-block;
+        background-image: url("imgs/eiffel.jpg");
+        background-size: cover;
+    width: 110%;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 10px;
+    height: 70px;
+    margin-top: 10px;
+    position: relative;
+    }
+    .lec{
+        position: relative;
+    background-image: url("imgs/grad.jpg");
+    background-size: cover;
+    width: 190%;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 10px;
+    display: block;
+    margin-top: 10px;
+    height: 120px;
+    margin-left: 2px;
+    }
+    .lec p{
+        position: relative;
+    text-align: justify;
+    color: white;
+    font-family:'Quicksand';
+    left: 120px;
+    top: 70px;
+    font-size: 8px;
+    }
+    .white{
+        position: relative;
+        height: 50px;
+        border-radius: 0px 0px 10px 10px;
+    }
+}
 </style>
 <body>
     <div class="sidenav">
@@ -84,7 +212,7 @@ top: 100px;
         <a href="#"><p> Jobs</p></a>
         <a href="#"><p> Profile</p></a>
         <a href="#"><p> Log out</p></a>
-        <a href="#"><img src="imgs/registered.jpg" style="border-radius: 5px; height: 100px; width: 90px;"></a>
+        <a href="#"><img id="sidimg" src="imgs/registered.jpg"></a>
       </div>
       
       <div class="main">
@@ -101,36 +229,32 @@ top: 100px;
            <p>WE ARE HIRING !</p>
         </div><br>
         <div class="teachers">
-            <div class="secteach"><br><br>
+            <div class="secteach"><br>
                 <div class="white" style="background-color: white; opacity: 0.7;">
-                    <p style="color: #E2AF6D;"><b>Secondary School Teachers</b></p>
-                    
+                    <p style="color: #E2AF6D;"><b>Secondary School Teachers</b></p>    
                 <p style="color: #03396c;">Maths/Physics, Chemistry/Biology, 
                     Geography/CRE, Maths/Business Studies
                 </p>
+                <br>
                 </div>
                <br><br>
             </div><br><br>
             <div class="elem">
-                <br><br>
                 <p>We are on the look out for</p>
                 <p>ELEMENTARY MATH Teachers</p> 
                 <p>St.Marys Schools</p> 
                 <p>Send your CV at info@stmarys.com</p>
-                <br>
             </div>
-            <div class="french"><br><br>
+            <div class="french"><br>
                 <div class="white" style="background-color: white; opacity: 0.7;">
                     <p>FRENCH TEACHER </p>
                        <p>NORTH-HORR PRIMARY SCHOOL</p> 
                         <p>nhps@gmail.com</p>
                 </div>
-                <br>
             </div>
-            <div class="lec"><br>
+            <div class="lec">
                 <b><p>ACCOUNTING LECTURER</p>
                 <p>KENYATTA UNIVERSITY</p></b>
-                <br>
             </div>
         </div>
         <br>
@@ -142,11 +266,13 @@ top: 100px;
                     <img src="imgs/MATH.jpg">
                 <p3>Mathematics</p3>
                 <button class="btn1"></button>
+                <button class="btn2"></button>
                 <p4>34%</p4>
                 <br><br>
                 <img src="imgs/ENGLISH.jpg">
                 <p3>Literature</p3>
                 <button class="btn1"></button>
+                <button class="btn3"></button>
                 <p4>80%</p4>
             </div>
         </div>
