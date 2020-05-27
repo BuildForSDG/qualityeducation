@@ -585,7 +585,7 @@ p4{
     margin-top: 8px;
 }
   .nav{
-    width: 50%;
+    width: 70%;
     display: inline-block;
 }
 .nav img{
@@ -606,7 +606,7 @@ p4{
     position: relative;
   }
   .hiring{
-    width: 55%;
+    width: 80%;
     height: 80px;
     position: relative;
     border-radius:10px;
@@ -617,7 +617,7 @@ p4{
     height:80px;
     opacity:0.7;
     position: relative;
-    left: 8px;
+    left: 20px;
 }
 .rect2{
     background-color:#03396C;
@@ -625,7 +625,7 @@ p4{
     height:80px;
     opacity:0.7;
     position: relative;
-    left:35px;
+    left:65px;
     top:-80px;
 }
 .rect3{
@@ -634,7 +634,7 @@ p4{
     height:80px;
     opacity:0.7;
     position: relative;
-    left: 62px;
+    left: 105px;
     top:-160px;
 }
 .rect4{
@@ -643,7 +643,7 @@ p4{
     height:80px;
     opacity:0.7;
     position: relative;
-    left: 89px;
+    left: 145px;
     top:-240px;
 }
 .rect5{
@@ -652,7 +652,7 @@ p4{
     height:80px;
     opacity:0.7;
     position: relative;
-    left: 116px;
+    left: 185px;
     top:-320px;
 }
 .hiring p{
@@ -670,28 +670,28 @@ p4{
 .white p{
     text-align: center;
     padding: 2px;
-    font-size: 7px;
+    font-size: 8px;
 }
 
 .elem p{
     color: white;
     text-align: center;
-    font-size: 7px;
+    font-size: 8px;
 }
 .french p{
     text-align: center;
-    font-size: 7px;
+    font-size: 10px;
 }
 /*MAIN 2*/
 .main2{
     float: right;
-    width: 35%;
-    margin-top: -460px;
-    margin-right: 10px;
+    width: 55%;
+    margin-top: -490px;
+    margin-right: -100px;
 }
 .progr{
     width: 100%;
-    height: 160px;
+    height: 190px;
     background-color: #e2af6d;
     border-radius: 10px;
     -webkit-box-shadow: 0 0 2px 1px #fff;
@@ -701,22 +701,22 @@ p4{
 .mag p1{
     color: white;
     padding: 5px;
-    font-size: 10px;
+    font-size: 15px;
     
 }
 .mag p2{
     top: -20px;
-    margin-left: 55px;
+    margin-left: 95px;
     color: #03396c;
-    font-size: 8px;
+    font-size: 10px;
     display: inline-block;
     position: relative;
     
 }
 .btn1{
     display: block;
-    margin-left: 35px;
-    width: 40px;
+    margin-left: 55px;
+    width: 55px;
     height: 5px;
     border-radius: 5px;
     margin-top: 15px;
@@ -724,8 +724,8 @@ p4{
 .btn2{
     position: relative;
     display: block;
-    margin-left: 35px;
-    width: 15px;
+    margin-left: 55px;
+    width: 25px;
     height: 5px;
     border-radius: 5px;
     margin-top: -6px;
@@ -734,8 +734,8 @@ p4{
 .btn3{
     position: relative;
     display: block;
-    margin-left: 35px;
-    width: 30px;
+    margin-left: 55px;
+    width: 40px;
     height: 5px;
     border-radius: 5px;
     margin-top: -6px;
@@ -745,24 +745,24 @@ p4{
 p3{
 color: #03396c;
 display: block;
-margin-left: 35px;
+margin-left: 55px;
 margin-top: -35px; 
 font-family: 'Roboto';
-font-size: 10px;
+font-size: 12px;
 }
 p4{
 color: #03396c;
 display: block;
-margin-left: 60px;
-margin-top: -15px; 
+margin-left: 115px;
+margin-top: -10px; 
 font-family: 'Roboto';
-font-size: 8px;
+font-size: 10px;
 }
 .mag img{
 display: block;
 margin-left: 5px;
-height: 25px;
-width: 25px;
+height: 30px;
+width: 30px;
 border-radius: 5px;
 -webkit-box-shadow: 0 0 1px 1px #fff;
 -moz-box-shadow: 0 0 1px 1px #fff;
@@ -779,21 +779,21 @@ box-shadow: 0 0 2px 1px #fff;
 }
 .magr p1{
 color: white;
-padding: 2px;
-font-size: 8px;
+padding: 3px;
+font-size: 15px;
 display: block;
 }
 .magr p2{
     margin-left: 50px;
-margin-top: -12px; 
+margin-top: -18px; 
     position: relative;
 color: #03396c;
 text-align: center;
-font-size: 8px;
+font-size: 10px;
 }
 .magr img{
 display: block;
-margin: auto;
+margin-left: 50px;
 height: 40px;
 width: 40px;
 }
@@ -803,7 +803,7 @@ width: 40px;
    text-align: center;
    margin: auto; 
    font-family: 'Roboto';
-   font-size: 8px;
+   font-size: 10px;
 }
 .magr p4{
 color: white;
@@ -819,7 +819,7 @@ display: inline-block;
 height: 10px;
 width: 10px;
 margin: auto;
-left: 15px;
+left: 35px;
 position: relative;
 }
 }
