@@ -53,8 +53,8 @@
 }
 .main2{
     float: right;
-    width: 42%;
-    margin-top: -630px;
+    width: 35%;
+    margin-top: -640px;
     margin-right: 10px;
 }
 .nav{
@@ -259,8 +259,8 @@ p4{
 .magr img{
     display: block;
     margin-left: 25px;
-    height: 120px;
-    width: 120px;
+    height: 180px;
+    width: 150px;
 }
 .magr p3{
         color: #03396c;
@@ -288,7 +288,7 @@ p4{
 }
 @media screen and (max-width: 500px) {
     .sidenav {
-        width: 60px;
+        width: 50px;
         margin: 10px;  
     }
     .sidenav a {
@@ -310,10 +310,10 @@ p4{
     #sidimg{
         border-radius: 3px; 
         height: 50px; 
-        width: 50px;
+        width: 45px;
     }
     .main {
-        margin-left: 80px; /* Same as the width of the sidenav */
+        margin-left: 70px; /* Same as the width of the sidenav */
         margin-top: 8px;
     }
     .nav{
@@ -402,23 +402,28 @@ p4{
     .white p{
         text-align: center;
         padding: 2px;
-        font-size: 7px;
     }
     
     .elem p{
         color: white;
         text-align: center;
-        font-size: 7px;
+        font-size: 8px;
+    margin-top: -10px;
+    }
+    .secteach p{
+        font-size: 8px;
+    margin-top: -12px;
     }
     .french p{
         text-align: center;
-        font-size: 7px;
+        font-size: 8px;
+    margin-top: -12px;
     }
     /*MAIN 2*/
     .main2{
         float: right;
-        width: 33%;
-        margin-top: -315px;
+        width: 30%;
+        margin-top: -340px;
         margin-right: 10px;
     }
     .progr{
@@ -502,7 +507,7 @@ p4{
 }
 .achie{
     width: 100%;
-    height: 135px;
+    height: 140px;
     background-color: #e2af6d;
     border-radius: 10px;
     -webkit-box-shadow: 0 0 2px 1px #fff;
@@ -524,7 +529,7 @@ p4{
 .magr img{
     display: block;
     margin-left: 5px;
-    height: 60px;
+    height: 80px;
     width: 60px;
 }
 .magr p3{
@@ -556,7 +561,7 @@ p4{
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
   .sidenav {
-    width: 40px;
+    width: 60px;
     margin: 10px;  
 }
 .sidenav a {
@@ -581,7 +586,7 @@ p4{
     width: 30px;
 }
 .main {
-    margin-left: 60px; /* Same as the width of the sidenav */
+    margin-left: 80px; /* Same as the width of the sidenav */
     margin-top: 8px;
 }
   .nav{
@@ -602,11 +607,11 @@ p4{
     margin-right: 16px;
     font-size: 10px;
     border-radius: 15px;
-    width: 170%;
+    width: 150%;
     position: relative;
   }
   .hiring{
-    width: 80%;
+    width: 120%;
     height: 80px;
     position: relative;
     border-radius:10px;
@@ -617,7 +622,7 @@ p4{
     height:80px;
     opacity:0.7;
     position: relative;
-    left: 20px;
+    left: 10px;
 }
 .rect2{
     background-color:#03396C;
@@ -625,7 +630,7 @@ p4{
     height:80px;
     opacity:0.7;
     position: relative;
-    left:65px;
+    left: 60px;
     top:-80px;
 }
 .rect3{
@@ -634,25 +639,25 @@ p4{
     height:80px;
     opacity:0.7;
     position: relative;
-    left: 105px;
+    left: 120px;
     top:-160px;
 }
 .rect4{
     background-color:#03396C;
-    width: 10%;
+    width: 12%;
     height:80px;
     opacity:0.7;
     position: relative;
-    left: 145px;
+    left: 180px;
     top:-240px;
 }
 .rect5{
     background-color:#03396c;
-    width: 10%;
+    width: 12%;
     height:80px;
     opacity:0.7;
     position: relative;
-    left: 185px;
+    left: 240px;
     top:-320px;
 }
 .hiring p{
@@ -670,28 +675,33 @@ p4{
 .white p{
     text-align: center;
     padding: 2px;
-    font-size: 8px;
 }
 
 .elem p{
     color: white;
     text-align: center;
-    font-size: 8px;
+    font-size: 10px;
+    margin-top: -8px;
 }
 .french p{
     text-align: center;
+    font-size: 10px;
+    margin-top: -12px;
+}
+.secteach p{
+    margin-top: -10px;
     font-size: 10px;
 }
 /*MAIN 2*/
 .main2{
     float: right;
-    width: 55%;
-    margin-top: -490px;
-    margin-right: -100px;
+    width: 65%;
+    margin-top: -550px;
+    margin-right: -270px;
 }
 .progr{
     width: 100%;
-    height: 190px;
+    height: 200px;
     background-color: #e2af6d;
     border-radius: 10px;
     -webkit-box-shadow: 0 0 2px 1px #fff;
@@ -770,7 +780,7 @@ box-shadow: 0 0 1px 1px #fff;
 }
 .achie{
 width: 100%;
-height: 135px;
+height: 155px;
 background-color: #e2af6d;
 border-radius: 10px;
 -webkit-box-shadow: 0 0 2px 1px #fff;
@@ -793,7 +803,7 @@ font-size: 10px;
 }
 .magr img{
 display: block;
-margin-left: 50px;
+margin-left: 75px;
 height: 40px;
 width: 40px;
 }
@@ -819,7 +829,7 @@ display: inline-block;
 height: 10px;
 width: 10px;
 margin: auto;
-left: 35px;
+left: 65px;
 position: relative;
 }
 }
