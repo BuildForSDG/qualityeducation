@@ -53,6 +53,12 @@ class Createtables extends Migration
             $table->string('application_deadline',200)->nullable();
             $table->string('created_at',200)->nullable();
         });
+        Schema::create('enrolled', function (Blueprint $table) {
+            $table->increments('course_id',200)->nullable();
+            $table->string('email',200)->nullable();
+            $table->string('progress',200)->nullable();
+            $table->string('enrolled',200)->nullable();
+        });
 
     }
 
@@ -63,9 +69,10 @@ class Createtables extends Migration
      */
     public function down()
     {
-     Schema::dropIfExists('users');
-     Schema::dropIfExists('jobs');
-     Schema::dropIfExists('courses');
-     Schema::dropIfExists('admin');
+        Schema::dropIfExists('users');
+        Schema::dropIfExists('jobs');
+        Schema::dropIfExists('courses');
+        Schema::dropIfExists('admin');
+        Schema::dropIfExists('enrolled');
     }
 }
