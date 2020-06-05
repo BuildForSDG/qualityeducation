@@ -1,5 +1,4 @@
 .sidenav {
-    font-family: 'Roboto';
     height: 100%;
     width: 150px;
     position: fixed;
@@ -8,14 +7,13 @@
     left: 0;
     background-color: transparent;
     overflow-x: hidden;
-    padding-top: 0px;
-    margin: 20px;
+    margin: 5px;
     border-right: solid #e2af6d 3px;
     
 }
 
 .sidenav a {
-    padding: 25px 25px 0px 0px;
+    padding: 15px 15px 0px 0px;
     text-decoration: none;
     font-size: 25px;
     color: white;
@@ -79,7 +77,7 @@
     margin-right: 16px;
     font-size: 17px;
     border-radius: 25px;
-    width: 90%;
+    width: 88%;
     outline: none;
     background-color: #03396C;
    color: white;
@@ -180,7 +178,7 @@
     
 }
 .mag p2{
-    margin-left: 300px;
+    margin-left: 290px;
     color: #03396c;
     
 }
