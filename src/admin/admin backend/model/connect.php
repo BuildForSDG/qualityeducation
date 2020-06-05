@@ -97,7 +97,7 @@ $ret=DB::select("SELECT courses.course_id,courses.course_title,courses.course_co
         $ret=DB::select("SELECT * FROM jobs ORDER by created_at DESC");
             return $ret;
     }
-    public static function getall1($id){
+    public static function getall1($ids){
         $ret=DB::table("courses")->where('course_id','=',$id)->get();
         return $ret;
     }
@@ -140,8 +140,6 @@ $ret=DB::select("SELECT courses.course_id,courses.course_title,courses.course_co
         if ($ret) {
            $ret=DB::table("enrolled")->where('course_id','=',$data)->delete();
            return $ret;
-        }else{
-            echo "failed";
         }
     }
 

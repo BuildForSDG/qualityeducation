@@ -33,7 +33,6 @@
 	<hr>
 	{{ csrf_field() }}
 	<span><?php if(session()->has('email')){
-	echo ('welcome again '.session('email'));
 } ?></span>
 				<div class="modal fade" id="logo">
 				<div class="modal-dialog">

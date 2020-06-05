@@ -227,7 +227,6 @@ if ($ret) {
 	return view('admin.adminmanage');
 }
 else{
-	print_r("failed to delete");
 }
 }
 function enrol(Request $Request){
