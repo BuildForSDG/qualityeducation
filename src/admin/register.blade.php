@@ -1,8 +1,14 @@
-@include('project.admin')
+<link rel="stylesheet" type="text/css" href="{{asset('Assets/css/bootstrap.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('Assets/css/bootstrap.min.css')}}">
+<script type="text/javascript" src="{{asset('Assets/js/jquery.min.js')}}"></script>
+<script type="text/javascript" src="{{asset('Assets/js/bootstrap.bundle.js')}}"></script>
+<script type="text/javascript" src="{{asset('Assets/js/bootstrap.bundle.min.js')}}"></script>
+<body>
+	<h3 class="text-center" >welcome to fundisha Admins Portal</h3>
 					<div class="container ">
 					<div class="row">
-					       <div class="col-sm-12 col-md-6 col-lg-6 card summary bg-light text-black">
-			                @if(session('status'))
+						<div style="margin-top: 3vh; margin-left: auto;display: block; margin-right: auto;" class="col-sm-12 col-md-6 col-lg-6 card summary bg-light text-black">
+							 @if(session('status'))
 							<div class="alert alert-success">
 							{{session('status')}}
 							</div>
@@ -67,8 +73,30 @@
 									<label>confirm password</label>
 									<input type="password" name="confirmed" class="form-control">
 								</div>
-							<div class="text-center"><button type="submit" class="btn btn-primary">Sign Up</button></div>
+							<div class="text-center"><button type="submit" class="btn btn-primary">Sign Up</button><br>
+								<p  class="text-center">Having an Account?<a href="adminlogin">Login</a></p></div>
 						</form>
+						</div>
+							</div>
+					</div></body>
+			
+
+			<style type="text/css">
+	h3{
+		color: white;
+	}
+	body{
+    background-image: url("Assets/images/bl.jpeg");
+    background-attachment: scroll;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+}
+</style>
+					<div class="container ">
+					<div class="row">
+					       <div class="col-sm-12 col-md-6 col-lg-6 card summary bg-light text-black">
+			               
 					       </div>
 					</div>
 				</div>
