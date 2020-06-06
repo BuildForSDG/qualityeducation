@@ -1,4 +1,9 @@
+body{
+    background-color: #03396C;
+    margin: 0;
+}
 .sidenav {
+    font-family: 'Roboto';
     height: 100%;
     width: 150px;
     position: fixed;
@@ -7,7 +12,7 @@
     left: 0;
     background-color: transparent;
     overflow-x: hidden;
-    margin: 5px;
+    margin: 10px;
     border-right: solid #e2af6d 3px;
     
 }
@@ -33,7 +38,7 @@
 #sidimg{
     border-radius: 5px; 
     height: 120px; 
-    width: 100px;
+    width: 120px;
 }
 .sidenav p{
     color: white;
@@ -48,15 +53,17 @@
 .main {
     margin-left: 200px; /* Same as the width of the sidenav */
     margin-top: 10px;
+    width: 80%;
 }
 .main2{
+    position: relative;
     float: right;
     width: 35%;
-    margin-top: -640px;
+    margin-top: -530px;
     margin-right: 10px;
 }
 .nav{
-    width: 53%;
+    width: 58%;
     display: inline-block;
 }
 .nav img{
@@ -83,87 +90,99 @@
    color: white;
    opacity: 0.7;
   }
-.hiring{
-    background-color:#E2AF6D;
-    width:54.5%;
-    height: 180px;
+  .arts p{
+    padding: 10px;
+    float: right;
+    color: #03396c;
+}
+.arts button{
+    padding: 10px;
+    width: 200px;
+    margin: 15px;
+    border-radius: 2px;
     position: relative;
-    border-radius:20px;
+    margin-top: 50px;
+    outline: none;
+    color: #03396c;
 }
-.rect1{
-    background-color:#03396C;
-    width: 12%;
-    height:180px;
-    opacity:0.7;
+.arts img{
+    float: right;
     position: relative;
-    left:50px;
+    margin-top: 150px;
+    margin-right: -50px;
+    transition: ease-in-out 0.3s;
 }
-.rect2{
-    background-color:#03396C;
-    width: 12%;
-    height:180px;
-    opacity:0.7;
+.arts img:hover{
+    transform: scale(1.1);
+    transition: ease-in-out 0.3s;
+}
+  .kiswahili img{
+    float: right;
     position: relative;
-    left:170px;
-    top:-180px;
+    margin-top: 150px;
+    margin-left: 10px;
+    transition: ease-in-out 0.3s;
 }
-.rect3{
-    background-color:#03396C;
-    width: 12%;
-    height:180px;
-    opacity:0.7;
-    position: relative;
-    left:290px;
-    top:-360px;
-}
-.rect4{
-    background-color:#03396C;
-    width: 12%;
-    height:180px;
-    opacity:0.7;
-    position: relative;
-    left:410px;
-    top:-540px;
-}
-.rect5{
-    background-color:#03396c;
-    width: 12%;
-    height:180px;
-    opacity:0.7;
-    position: relative;
-    left:530px;
-    top:-720px;
-}
-.hiring p{
-    color:white;
-    font-family: quicksand;
-    font-size: 36px;
-    font-weight:bold;
-    position: relative;
-    top:-850px;
-    text-align:center;
-    margin: auto;
-}
-.teachers{
-    display: inline-block;
-    width: 55%;
-}
-
-.white p{
-    text-align: center;
-    padding: 5px;
-}
-
-.elem p{
+.kiswahili p{
+    padding: 10px;
+    float: right;
     color: white;
-    text-align: center;
 }
-.french p{
-    text-align: center;
+.kiswahili button{
+    padding: 10px;
+    width: 100px;
+    margin: 15px;
+    border-radius: 2px;
+    position: relative;
+    margin-top: 50px;
+    outline: none;
 }
-.progr{
+.kiswahili img{
+    float: right;
+    position: relative;
+    margin-top: px;
+    margin-right: -50px;
+    transition: ease-in-out 0.3s;
+}
+.kiswahili img:hover{
+    transform: scale(1.1);
+    transition: ease-in-out 0.3s;
+}
+  .history img{
+    float: left;
+    position: relative;
+    margin-top: 150px;
+    margin-right: -100px;
+    transition: ease-in-out 0.3s;
+}
+.history p{
+    padding: 10px;
+    float: right;
+    color: #03396c;
+}
+.history button{
+    padding: 10px;
+    width: 100px;
+    margin: 15px;
+    border-radius: 2px;
+    position: relative;
+    margin-top: 50px;
+    outline: none;
+}
+.history img{
+    float: right;
+    position: relative;
+    margin-top: px;
+    margin-right: -50px;
+    transition: ease-in-out 0.3s;
+}
+.history img:hover{
+    transform: scale(1.1);
+    transition: ease-in-out 0.3s;
+}
+  .progr{
     width: 100%;
-    height: 260px;
+    height: 250px;
     background-color: #e2af6d;
     border-radius: 20px;
     -webkit-box-shadow: 0 0 5px 3px #fff;
@@ -173,70 +192,80 @@
 .mag p1{
     color: white;
     font-weight: 300;
-    padding: 12px;
+    margin: 20px;
     font-size: 25px;
     
 }
 .mag p2{
-    margin-left: 290px;
+    margin-left: 250px;
     color: #03396c;
     
 }
 .btn1{
     display: block;
-    margin-left: 130px;
-    width: 150px;
+    margin-left: 50px;
+    width: 230px;
     height: 12px;
     border-radius: 5px;
-    margin-top: 10px;
+    margin-top: 40px;
+    -webkit-box-shadow: 0 0 3px 1px #fff;
+    -moz-box-shadow: 0 0 3px 1px #fff;
+    box-shadow: 0 0 3px 1px #fff;
 }
 .btn2{
     position: relative;
     display: block;
-    margin-left: 130px;
-    width: 51px;
+    margin-left: 50px;
+    width: 80px;
     height: 12px;
     border-radius: 10px;
     margin-top: -12px;
     background-color: #03396c;
+    -webkit-box-shadow: 0 0 3px 1px #fff;
+    -moz-box-shadow: 0 0 3px 1px #fff;
+    box-shadow: 0 0 3px 1px #fff;
 }
 .btn3{
     position: relative;
     display: block;
-    margin-left: 130px;
-    width: 120px;
+    margin-left: 50px;
+    width: 200px;
     height: 12px;
     border-radius: 10px;
     margin-top: -12px;
     background-color: #03396c;
+    -webkit-box-shadow: 0 0 3px 1px #fff;
+    -moz-box-shadow: 0 0 3px 1px #fff;
+    box-shadow: 0 0 3px 1px #fff;
 }
 p3{
     color: #03396c;
    display: block;
-   margin-left: 130px;
+   margin-left: 150px;
    margin-top: -50px; 
-   font-family: 'Roboto';
 }
 p4{
     color: #03396c;
     display: block;
-    margin-left: 300px;
+    margin-left: 290px;
     margin-top: -18px; 
-    font-family: 'Roboto';
 }
 .mag img{
     display: block;
     margin-left: 25px;
-    height: 70px;
-    width: 70px;
-    border-radius: 20px;
+    margin-left: 10px;
+    height: 50px;
+    width: 100px;
+    margin-top: 10px;
+    border-radius: 30px;
     -webkit-box-shadow: 0 0 3px 1px #fff;
     -moz-box-shadow: 0 0 3px 1px #fff;
     box-shadow: 0 0 3px 1px #fff;
 }
 .achie{
     width: 100%;
-    height: 345px;
+    height: 250px;
+    margin-top: 10px;
     background-color: #e2af6d;
     border-radius: 20px;
     -webkit-box-shadow: 0 0 5px 3px #fff;
@@ -246,18 +275,20 @@ p4{
 .magr p1{
     color: white;
     font-weight: 300;
-    padding: 12px;
+    padding: 10px;
     font-size: 25px;
+    margin: 20px;
 }
 .magr p2{
-    float: right;
+    /* float: right; */
     color: #03396c;
     margin: 10px;
+    margin-left: 170px;
 }
 .magr img{
     display: block;
-    margin-left: 25px;
-    height: 180px;
+    margin-left: 20px;
+    height: 150px;
     width: 150px;
 }
 .magr p3{
@@ -306,16 +337,17 @@ p4{
         transition: none;
     }
     #sidimg{
-        border-radius: 3px; 
+        border-radius: 10px; 
         height: 50px; 
-        width: 45px;
+        width: 50px;
     }
     .main {
         margin-left: 70px; /* Same as the width of the sidenav */
         margin-top: 8px;
+        width: 50%;
     }
     .nav{
-        width: 50%;
+        width: 90%;
         display: inline-block;
     }
     .nav img{
@@ -334,95 +366,13 @@ p4{
         border-radius: 25px;
         width: 100%;
         position: relative;
-      }
-      .hiring{
-        width: 60%;
-        height: 80px;
-        position: relative;
-        border-radius:10px;
-    }
-    .rect1{
-        background-color:#03396C;
-        width: 12%;
-        height:80px;
-        opacity:0.7;
-        position: relative;
-        left: 15px;
-    }
-    .rect2{
-        background-color:#03396C;
-        width: 12%;
-        height:80px;
-        opacity:0.7;
-        position: relative;
-        left:65px;
-        top:-80px;
-    }
-    .rect3{
-        background-color:#03396C;
-        width: 12%;
-        height:80px;
-        opacity:0.7;
-        position: relative;
-        left: 110px;
-        top:-160px;
-    }
-    .rect4{
-        background-color:#03396C;
-        width: 12%;
-        height:80px;
-        opacity:0.7;
-        position: relative;
-        left: 155px;
-        top:-240px;
-    }
-    .rect5{
-        background-color:#03396c;
-        width: 12%;
-        height:80px;
-        opacity:0.7;
-        position: relative;
-        left: 205px;
-        top:-320px;
-    }
-    .hiring p{
-        font-size: 18px;
-        position: relative;
-        top: -370px;
-        text-align:center;
-        margin: auto;
-    }
-    .teachers{
-        display: inline-block;
-        width: 50%;
-    }
-    
-    .white p{
-        text-align: center;
-        padding: 2px;
-    }
-    
-    .elem p{
-        color: white;
-        text-align: center;
-        font-size: 8px;
-    margin-top: -10px;
-    }
-    .secteach p{
-        font-size: 8px;
-    margin-top: -12px;
-    }
-    .french p{
-        text-align: center;
-        font-size: 8px;
-    margin-top: -12px;
     }
     /*MAIN 2*/
     .main2{
         float: right;
-        width: 30%;
-        margin-top: -340px;
-        margin-right: 10px;
+        width: 25%;
+        margin-top: -300px;
+        margin-right: 50px;
     }
     .progr{
         width: 100%;
@@ -560,7 +510,7 @@ p4{
   .sidenav a {font-size: 18px;}
   .sidenav {
     width: 60px;
-    margin: 10px;  
+    margin: 15px;  
 }
 .sidenav a {
     padding: 25px 25px 0px 0px;
@@ -692,8 +642,9 @@ p4{
 }
 /*MAIN 2*/
 .main2{
+    position: relative;
     float: right;
-    width: 65%;
+    width: 55%;
     margin-top: -550px;
     margin-right: -270px;
 }

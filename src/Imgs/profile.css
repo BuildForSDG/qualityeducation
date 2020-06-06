@@ -1,0 +1,331 @@
+body{
+    background-color: #03396C;
+}
+.main{
+    background-color: #E2AF6D;
+    border-radius: 20px;
+}
+.menu p{
+    display: inline-block;
+    padding: 10px;
+    transition: ease-in 0.3s;
+}
+.menu p:hover{
+color: #E2AF6D;
+border-bottom: solid 3px white;
+transition: ease-out 0.3s;
+}
+
+img[src="Imgs/registered.jpg"]{
+    border-radius: 50px;
+    width: 100px;
+    height: 100px;
+}
+.main p{
+    color:#ffffff;
+    font-size: 18px;
+    font-weight: normal;
+    font-style: 'Roboto';
+    text-align: center;
+}
+.main input{
+    text-align: center;
+    border-radius: 20px;
+    border-width: thin;
+    width: 250px;
+    height: 20px;
+    font-size: 15px;
+    font-style: 'quicksand';
+    font-weight: normal;
+}
+.footer{
+    background-color: black;
+    opacity: 0.7;
+    text-align: center;
+    color:white;
+    padding: 20px;
+}
+.section1 img{
+    width: 25px;
+    height: 25px;
+}
+.fundisha{
+    font-weight: bold;
+    font-size: 25px;
+    font-style: 'quicksand';
+}
+.copyright{
+    padding-bottom: 20px;
+    font-size: 15px;
+    font-style: 'roboto';
+}
+.section1{
+    font-size: 20px;
+    font-weight: normal;
+    font-style: 'quicksand';
+}
+.main a{
+    text-decoration: none;
+    color:white;
+}
+.footer a{
+    color:#E2AF6D;
+    text-decoration: underline;
+    font-size: 20px;
+    line-height: 50px;
+} 
+.footer a:hover{
+    transition: linear 0.3s;
+    color: white;
+}
+
+@media screen and (max-width: 480px){
+    .menu{
+        display: inline-block;
+        padding: 10px;
+    }
+    .menu a{
+        text-decoration: none;
+        margin: 15px;
+        color: white;
+        box-shadow: #ffffff 2px;
+        padding: 3px;
+        border-radius: 5px;
+    }
+    .menu img{
+        float: left;
+        margin-top: -3px;
+    }
+    .mobileview{
+        display: none;
+    }
+    .main{
+        text-align:center;
+        padding: 30px;
+        margin: 20px;
+    }
+    .main input{
+        text-align: center;
+        border-radius: 15px;
+        border-width: thin;
+        width: 300px;
+        height: 25px;
+        font-size: 15px;
+        font-style: 'quicksand';
+        font-weight: normal;
+    }
+    .footer{
+        padding: 10px;
+    } 
+    .footer a{
+        font-size: x-small;
+        position: relative;
+        display: inline-block;
+    }
+    .footer p{
+      font-size: xx-small;    
+  } 
+  
+  .section1 img{
+      height: 15px;
+      width: 15px;
+      display: inline-block;
+  }
+}
+   
+
+@media screen and (max-width: 276px){
+    .menu{
+        display: inline-block;
+        padding: 0px;
+    }
+    .menu p{
+        text-decoration: none;
+        margin: 0.5px;
+        color: white;
+        font-size: 8px;
+    }
+    .mobileview{
+        display: none;
+    }
+    .main{
+        text-align:center;
+        padding: 10px;
+        margin: 5px;
+    }
+    .main input{
+        text-align: center;
+        border-radius: 10px;
+        border-width: thin;
+        width: 50px;
+        height: 15px;
+        font-size: 10px;
+        font-style:'quicksand';
+        font-weight: normal;
+        margin-left: -22px;
+    }
+}
+@media screen and (max-width:320px){
+    .menu{
+        display: inline-block;
+        padding: 0px;
+    }
+    .menu a{
+        margin: 1px;
+        color: white;
+        font-size: x-small;
+    }
+    .menu img{
+        float: left;
+        margin-top: 5px;
+        height: 35px;
+        width: 35px;
+    }
+    .mobileview{
+        display: none;
+    }
+    .main{
+        text-align:center;
+        padding: 30px;
+        margin: 20px;
+    }
+    .main input{
+        text-align: center;
+        border-radius: 15px;
+        border-width: thin;
+        width: 200px;
+        height: 15px;
+        font-size: 10px;
+        font-style:'quicksand';
+        font-weight: normal;
+    }
+    .footer{
+        padding: 10px;
+    } 
+    .footer a{
+        font-size: x-small;
+        position: relative;
+        display: inline-block;
+    }
+    .footer p{
+      font-size: xx-small;    
+  } 
+  
+  .section1 img{
+      height: 15px;
+      width: 15px;
+      display: inline-block;
+  }
+}
+   
+
+@media screen and (min-width: 481px) and (max-width: 767px){
+   .mobileview{
+    display: none;
+  }
+  .menu p{
+      text-decoration: none;
+      color:white;
+      font-size: 20px;
+      margin: 15px;
+  }
+  .menu img{
+      width: 25px;
+      height: 25px;
+  }
+  .main{
+      text-align: center;
+      padding: 20px;
+      margin: 30px;
+  }
+  .footer a{
+      font-size: 30px;
+  }
+  .footer p{
+    font-size: 25px;
+}
+
+   }
+
+@media screen and (min-width: 768px) and (max-width: 1024px){
+    .mobileview{
+        display: none;
+    }
+    .main{
+        text-align:center;
+        padding: 20px;
+        margin: 30px;
+    }
+    .main p{
+        font-size: 30px;
+    }
+    .menu img{
+        width: 70px;
+        height: 70px;
+    }
+    .menu a{
+        text-decoration: none;
+        color:white;
+        padding: 10px;
+        font-size: 30px;
+        margin-left: 60px;
+    }
+    .footer a{
+        font-size: 30px;
+    }
+    
+}
+@media screen and (min-width: 1025px) and (max-width: 1280px){
+    .mobileview{
+        display: none;
+    }
+    .menu a{
+        text-decoration: none;
+        color:white;
+        font-size: 25px;
+        margin: 75px;
+    }
+    .menu img{
+        width: 40px;
+        height: 40px;
+    }
+    .main{
+        padding: 30px;
+        margin: 20px;
+        text-align: center;
+    }
+    .footer a{
+        font-size: 30px;
+    }
+}
+  @media screen and (min-width: 1281px){
+      .mobileview{
+          display: none;
+      }
+      .menu a{
+          text-decoration:none;
+          color:white;
+          font-size: 25px;
+          margin: 80px;
+      }
+      .menu img{
+          width: 50px;
+          height: 50px;
+      }
+      .main{
+          padding: 30px;
+          text-align: center;
+      }
+      .footer a{
+        font-size: 30px;
+    } 
+    .footer p{
+        font-size: 30px;
+    }
+    .footer{
+        padding: 30px;
+    }
+  }
+
+
+
