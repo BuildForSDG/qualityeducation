@@ -69,10 +69,6 @@ class Createtables extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('users');
-        Schema::dropIfExists('jobs');
-        Schema::dropIfExists('courses');
-        Schema::dropIfExists('admin');
-        Schema::dropIfExists('enrolled');
+        
     }
 }

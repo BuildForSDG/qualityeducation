@@ -17,9 +17,9 @@ class project extends Controller{
 		return view('project.signUp');
 	}
 	function signin(Request $Request){
-		$check=connect::check([
+		$checks=connect::check([
 			'email'=>$Request->input('email')]);
-		if (count($check)>0) {
+		if (count($checks)>0) {
 $Request->session()->flash("status","User Arleady exists");
                     return back();
                 
@@ -110,8 +110,7 @@ function enrol(Request $Request){
 	$check=connect::checkenrol($arr);
 	if (count($check)>0) {
 	$course_id=$Request->all();
-	$res=connect::getcourse($course_id);
-	$datas=json_decode($res);
+	$datas=json_decode(connect::getcourse($course_id));
 	return view('project.learn',["course"=>$datas]);
 	}else{
 	$enrol=connect::enrolcourse([
