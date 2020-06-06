@@ -6,9 +6,14 @@ use App\connect;
 use Illuminate\Http\Request;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Response;
+
 class project extends Controller{
 	function index(){
-		return view('project.index');
+		$res=connect::getall(session('email'));
+		return view('project.index',["courses"=>$res]);
+	}
+	function courses(){
+		return view('project.addcourse');
 	}
 	function login(){
 		return view('project.login');
@@ -17,9 +22,47 @@ class project extends Controller{
 		return view('project.signUp');
 	}
 	function signin(Request $Request){
-		$checks=connect::check([
+		$check1=connect::check([
 			'email'=>$Request->input('email')]);
-		if (count($checks)>0) {
+		if (count($check1)>0) {
+$Request->session()->flash("status","User Arleady exists");
+                    return back();
+                
+		}else{
+			$insert=connect::signin([
+				'email'=>$Request->input('email'),
+				'password'=>md5($Request->input('pwd')),
+				'firstname'=>$Request->input('faname'),
+				'lastname'=>$Request->input('laname'),
+				'mobile'=>$Request->input('tel'),
+				'country'=>$Request->input('country'),
+				'gender'=>$Request->input('gender'),
+				'DOB'=>$Request->input('dob')
+
+			]);if ($insert) {
+				$Request->session()->flash("status","Account created successfully Login To continue");
+                     return view('project.login'); 
+			}
+			else{
+$Request->session()->flash("status","Failed to create account");
+                    //return back();	
+			}
+		}
+	}
+	function adminregister(Request $Request){
+		$Request->flash();
+		$Request->validate([
+			'email'=>'required',
+			'firstname'=>'required',
+			'lastname'=>'required',
+			'mobile'=>'required|min:10',
+			'country'=>'required',
+			'password'=>'required|min:6'
+
+		]);
+		$check=connect::check([
+			'email'=>$Request->input('email')]);
+		if (count($check)>0) {
 $Request->session()->flash("status","User Arleady exists");
                     return back();
                 
@@ -57,7 +100,10 @@ $Request->session()->flash("status","Failed to create account");
 		$check=connect::userlogin($arry);
 		if (count($check)>0) {
 $Request->session()->flash("login","logged in successfully");
-                    return view('project.index');      
+$Request->session()->put('email',$Request->input('email'));
+        $res=connect::getall(session('email'));
+		//$datas=json_decode($res);
+		return view('project.index',["courses"=>$res]);     
 		}else{
 			$Request->session()->flash("login","wrong username or password");
                     return back(); 
@@ -98,30 +144,71 @@ function morecourses(){
 	$res=connect::getall(session('email'));
 	return view('project.allcourses',["courses"=>$res]);
 }
-function jobs(){
+function admin(){
 	$res=connect::getall(session('email'));
-	return view('project.jobs',["courses"=>$res]);
+	return view('project.admin');
 }
+function manage(){
+	$res=connect::getall(session('email'));
+	return view('project.adminmanage',["courses"=>$res]);
+}
+function jobs(){
+	$res=connect::getalljobs();
+	return view('project.jobs',["jobs"=>$res]);
+}
+function enrols(Request $Request){
+	$course_id1=$Request->input('course_id');
+	$res=connect::getall1($course_id1);
+	$result=json_decode($res);
+	$res1=connect::getallc($course_id1);
+	$data=json_decode($res1);
+	$res12="";
+	$data2=json_decode($res12);
+	return view('admin.viewmore',["course"=>$result,'ada'=>$data2,'chapter'=>$data]);
+	}
+	function datum(Request $Request){
+		$course_id1=$Request->input('course_id');
+	$res=connect::getall1($course_id1);
+	$result=json_decode($res);
+	$res1=connect::getallc($course_id1);
+	$data=json_decode($res1);
+	$var=array(
+		'id'=>$Request->input('id'),
+		'c_no'=>$Request->input('c_no')
+
+	);
+		$res12=connect::getallch($var);
+		$data2=json_decode($res12);
+	return view('project.learn',['ada'=>$data2,"course"=>$result,'chapter'=>$data]);
+
+	}
 function enrol(Request $Request){
 	$course_id1=$Request->input('course_id');
-	$arr=array(
-'email'=>session('email'),
-'course_id'=>$course_id1);
+	$arr=array('email'=>session('email'),'course_id'=>$course_id1);
 	$check=connect::checkenrol($arr);
 	if (count($check)>0) {
-	$course_id=$Request->all();
-	$datas=json_decode(connect::getcourse($course_id));
-	return view('project.learn',["course"=>$datas]);
+	$res=connect::getall1($course_id1);
+	$result=json_decode($res);
+	$res1=connect::getallc($course_id1);
+	$data=json_decode($res1);
+	$res12="";
+	$data2=json_decode($res12);
+	return view('project.learn',["course"=>$result,'ada'=>$data2,'chapter'=>$data]);
 	}else{
+		$enrolled="enrolled";
 	$enrol=connect::enrolcourse([
 		'email'=>session('email'),
-		'course_id'=>$course_id1
+		'course_id'=>$course_id1,
+		'enrol'=>$enrolled
 	]);
 	if ($enrol) {
-	$course_id=$Request->all();
-	$res=connect::getcourse($course_id);
-	$datas=json_decode($res);
-	return view('project.learn',["course"=>$datas]);
+	$res=connect::getall1($course_id1);
+	$result=json_decode($res);
+	$res1=connect::getallc($course_id1);
+	$data=json_decode($res1);
+	$res12="";
+	$data2=json_decode($res12);
+	return view('project.learn',["course"=>$result,'ada'=>$data2,'chapter'=>$data]);
 	}else{
 		return back();
 	}}
@@ -157,9 +244,8 @@ function jobss(Request $Request){
                     $Request->session()->flash("job","failed to add job");
                     return back();
                 } }
-
-
 }
+
 }
 
 ?>

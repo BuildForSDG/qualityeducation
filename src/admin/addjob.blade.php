@@ -17,6 +17,7 @@
 @endif
 			<form action="jobss" method="post" enctype="multipart/form-data" accept-charset="utf-8">
 				{{ csrf_field() }}
+				<h4 class="text-center">Add job here</h4>
 				<div class="form-group">
 					<span style="color: red;"> @error("job_title")
 								{{ $message }}

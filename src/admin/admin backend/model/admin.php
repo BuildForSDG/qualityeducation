@@ -163,15 +163,59 @@ function deletecourse(Request $request){
 	}
 	return view('admin.adminmanage',["courses"=>$res]);
 }
+function updatejob(Request $Request){
+	$Request->flash();
+	$Request->validate([
+			'job_title'=>'required',
+			'email'=>'required',
+			'job_des'=>'required',
+			'job_attach'=>'required|image|mimes:jpeg,png,jpg,gif,svg',
+			'date'=>'required|date|after:today'
+		]);
+	$dates=date("Y-m-d");
+	$jobid=$Request->input('job_id');
+	$job_upload=$Request->job_attach->getClientOriginalName();
+    $upload=$Request->job_attach->move(public_path('images'),$job_upload);
+    $details=array(
+    	'job_title'=>$Request->input('job_title'),
+        		'email'=>$Request->input('email'),
+        		'job_description'=>$Request->input('job_des'),
+        		'job_attachment'=>$job_upload,
+        		'application_deadline'=>$Request->input('date'),
+        		'created_at'=>$dates
+    );
+    if ($upload) {
+    	$addcourse=connect::updatejob($jobid,$details);
+        	if ($addcourse) {
+                    $Request->session()->flash("jobup","Successfully updated job");
+	               return back();
+                }
+                else{
+                    $Request->session()->flash("jobup","failed to update job");
+                   return back();
+                } }
+}
+function deletejob(Request $request){
+	$jobid=$request->input('id');
+	$res=connect::deletejob($jobid);
+	if ($res) {
+		$res=connect::getalljobs();
+	return view('admin.managejobs',["jobs"=>$res]);
+	}
+	else{
+		$res=connect::getalljobs();
+	return view('admin.managejobs',["jobs"=>$res]);
+	}
+}
+
 function deletechapter(Request $request){
-	$id=$request->input('id');
-	$res=connect::deletechapter($id);
+	$id1=$request->input('id');
+	$res=connect::deletechapter($id1);
 	if ($res) {
 		return back();	
 	}else{
 			return back();
 		}
-
 }
 function manage(){
 	$res=connect::getall(session('email'));
@@ -204,10 +248,10 @@ function jobss(Request $Request){
     	$addcourse=connect::addjob([
         		'job_title'=>$Request->input('job_title'),
         		'email'=>$Request->input('email'),
-        		'job_des'=>$Request->input('job_des'),
-        		'job_attach'=>$job_upload,
-        		'date'=>$Request->input('date'),
-        		'create'=>$dates
+        		'job_description'=>$Request->input('job_des'),
+        		'job_attachment'=>$job_upload,
+        		'application_deadline'=>$Request->input('date'),
+        		'created_at'=>$dates
         	]);
         	if ($addcourse) {
                     $Request->session()->flash("job","Successfully added job");
@@ -227,6 +271,7 @@ if ($ret) {
 	return view('admin.adminmanage');
 }
 else{
+	print_r("failed to delete");
 }
 }
 function enrol(Request $Request){

@@ -25,12 +25,28 @@
     <img src='images/{{$value->job_attachment}}' alt="Avatar" class="image col-sm-12 col-md-4 col-lg-4">
     <div class="col-sm-12 col-md-8 col-lg-8">
     <p class="text-center">{{$value->job_title}}</p>
-    <p class="">{{$value->job_description}}</p>
+    <p class="">{{$value->job_description}}{{$value->job_id}} </p>
     <div class="text-center">
-<button class="btn btn-primary" data-toggle="modal" data-target="#k+{{$value->job_id}}">update</button>
- <button id="enrol" class="btn btn-danger"><a href="delete?id={{$value->job_id}}">Delete</a></button>
-    </div>
-    <div class="modal fade" id="K+{{$value->job_id}}">
+<button class="btn btn-primary" data-toggle="modal" data-target="#jj">update</button>
+<button  class="btn btn-danger"  data-toggle="modal" data-target="#delete">Delete</button>
+  <div class="modal fade" id="delete">
+        <div class="modal-dialog">
+          <div class="modal-content">
+          <div class="modal-body">
+            <form action="deletejob" method="post">
+                            {{ csrf_field() }}
+              <div class="form-group">
+                <label>Are you sure you want to delete this Job?</label>
+                <input type="text" name="id" hidden="true"  value="{{$value->job_id}}">
+              </div>
+                <div class="text-center"><button data-dismiss="modal" class="btn btn-secondary">cancel</button>
+                <button type="submit" class="btn btn-primary">Yes</button></div>
+                  </form>
+              </div>          
+          </div>
+        </div>
+        </div>
+        <div class="modal fade" id="jj">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-head">
@@ -39,21 +55,28 @@
             </button>
           </div>
           <div class="modal-body">
-            <form action="jobss" method="post" enctype="multipart/form-data" accept-charset="utf-8">
+            <form action="updatejob" method="post" enctype="multipart/form-data" accept-charset="utf-8">
         {{ csrf_field() }}
+        <h3 class="text-center">Update job details here</h3>
+         @if(session('jobup'))
+              <div class="alert alert-success">
+              {{session('jobup')}}
+              </div>
+              @endif
+        <input type="text" name="job_id" hidden="true" value="{{$value->job_id}}" class="form-control">
         <div class="form-group">
           <span style="color: red;"> @error("job_title")
                 {{ $message }}
               @enderror </span>
           <label>Job Title</label>
-          <input type="text" name="job_title" placeholder="Job Title" class="form-control">
+          <input type="text" name="job_title" placeholder="Job Title" value="{{$value->job_title}}" class="form-control">
         </div>
         <div class="form-group">
           <span style="color: red;"> @error("email")
                 {{ $message }}
               @enderror </span>
           <label>Email</label>
-          <input type="email" name="email" placeholder="Email Address" class="form-control">
+          <input type="email" name="email" placeholder="Email Address" value="{{$value->email}}" class="form-control">
         </div>
         <div class="form-group">
           <span style="color: red;"> @error("job_des")
@@ -61,7 +84,7 @@
               @enderror </span>
           <label>Job Description</label>
           <textarea name="job_des" class="form-control" placeholder="Job Description here">
-            
+            {{$value->job_description}}
           </textarea>
         </div>
         <div class="form-group">
@@ -69,7 +92,7 @@
                 {{ $message }}
               @enderror </span>
           <label>Application Deadline</label>
-          <input type="date" name="date" class="form-control">
+          <input type="date" name="date" class="form-control" value="{{$value->application_deadline}}">
         </div>
         <div class="form-group">
           <span style="color: red;"> @error("job_attach")
@@ -80,12 +103,13 @@
         </div>
         
         <div class="text-center">
-          <button class="btn btn-primary" type="submit"> Post Job</button>
+          <button class="btn btn-primary" type="submit"> Update Job details</button>
         </div>
       </form>
           </div>
         </div>
       </div>
+    </div>
     </div>
     </div>
     

@@ -32,8 +32,7 @@
 	</div>
 	<hr>
 	{{ csrf_field() }}
-	<span><?php if(session()->has('email')){
-} ?></span>
+	
 				<div class="modal fade" id="logo">
 				<div class="modal-dialog">
 					<div class="modal-content">

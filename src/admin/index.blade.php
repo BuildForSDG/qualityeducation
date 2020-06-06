@@ -22,7 +22,7 @@
 </body>
 <style type="text/css">
 	h3{
-		color: white;
+	 color: white;
 	}
 	body{
     background-image: url("Assets/images/bl.jpeg");
