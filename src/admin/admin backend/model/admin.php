@@ -85,6 +85,14 @@ $Request->session()->put('email',$Request->input('email'));
 			'course_image'=>'required|image|mimes:jpeg,png,jpg,gif,svg',
 			'course_video'=>'required|mimes:mp4,mkv,VOB,Ogg,WebM',
 			'course_content'=>'required']);
+		$details=array(
+		'course_id'=>$Request->input('course_id'),
+        'course_title'=>$Request->input('course_title'));
+		$checkcourse=connect::checkaddcourse($details);
+		if (count($checkcourse)>0) {
+			 $Request->session()->flash("status","course Already exists");
+                    return back();
+		}else{
 		$course_image=$Request->course_image->getClientOriginalName();
 		$course_video=$Request->course_video->getClientOriginalName();
         $upload=$Request->course_image->move(public_path('images'),$course_image);
@@ -105,7 +113,7 @@ $Request->session()->put('email',$Request->input('email'));
                     return back();
                 }
         	
-        }
+        }}
 	}
 	function add_chapter(Request $Request){
 		$Request->flash();

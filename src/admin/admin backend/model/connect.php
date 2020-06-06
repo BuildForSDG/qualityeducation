@@ -66,6 +66,10 @@ class connect extends Model
         $ret=DB::table("chapters")->where($data)->get();
         return $ret;
     }
+    public static function checkaddcourse(array $data){
+        $ret=DB::table("courses")->where($data)->get();
+        return $ret;
+    }
     public static function add_chapter(array $data){
        $ret=DB::table("chapters")->insert($data);
         return $ret;
