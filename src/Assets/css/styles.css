@@ -106,10 +106,14 @@ h1{
 
 /*COURSES & JOBS*/
 
-.courses h3{
+.courses h3 a{
+    text-decoration: none;
     color: white;
     text-align: justify;
     letter-spacing: 3px;
+}
+.courses a:hover{
+    color: #e2af6d;
 }
 .contain{
     margin: 20px;
@@ -176,10 +180,14 @@ hr{
     text-align: center;
 }
 /*JOBS*/
-.jobs h3{
+.jobs h3 a{
     color: white;
     text-align: justify;
     letter-spacing: 3px;
+    text-decoration: none;
+}
+.jobs a:hover{
+    color: #e2af6d;
 }
 /*PATNERS*/
 .partn{
