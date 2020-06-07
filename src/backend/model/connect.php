@@ -2,7 +2,6 @@
 namespace App;
 use Illuminate\Database\Eloquent\Model;
 use DB;
-
 class connect extends Model
 {
     public static function signin(array $data){
@@ -59,7 +58,6 @@ class connect extends Model
     }
     public static function updatejob($jobid,array $data){
         $ret=DB::table("jobs")->where('job_id','=',$jobid)->update($data);
-        print_r($ret);
         return $ret;
     }
       public static function addcourse(array $data){
