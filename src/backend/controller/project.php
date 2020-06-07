@@ -10,7 +10,8 @@ use Illuminate\Support\Facades\Response;
 class project extends Controller{
 	function index(){
 		$res=connect::getall(session('email'));
-		return view('project.index',["courses"=>$res]);
+		$result=connect::getalljobs();
+		return view('project.index',["courses"=>$res,"jobs"=>$result]);
 	}
 	function courses(){
 		return view('project.addcourse');
@@ -20,6 +21,12 @@ class project extends Controller{
 	}
 	function signup(){
 		return view('project.signUp');
+	}
+	function logout1(Request $request){
+		$request->session()->flush();
+		$res=connect::getall(session('email'));
+		$result=connect::getalljobs();
+		return view('project.index',["courses"=>$res,"jobs"=>$result]);
 	}
 	function signin(Request $Request){
 		$check1=connect::check([
@@ -44,8 +51,7 @@ $Request->session()->flash("status","User Arleady exists");
                      return view('project.login'); 
 			}
 			else{
-$Request->session()->flash("status","Failed to create account");
-                    //return back();	
+$Request->session()->flash("status","Failed to create account");	
 			}
 		}
 	}
