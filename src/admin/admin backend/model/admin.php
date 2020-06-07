@@ -31,30 +31,27 @@ class admin extends Controller{
 			'password'=>'required|min:6'
 
 		]);
-		$check=connect::checkadmin([
-			'email'=>$Request->input('email')]);
+		$emailch=array('email'=>$Request->input('email'));
+		$check=connect::checkadmin($emailch);
 		if (count($check)>0) {
         $Request->session()->flash("status","User Arleady exists");
                     return back();
                
-		}else{
-			$insert=connect::adminsignin([
-				'email'=>$Request->input('email'),
-				'password'=>md5($Request->input('password')),
-				'firstname'=>$Request->input('firstname'),
-				'lastname'=>$Request->input('lastname'),
-				'mobile'=>$Request->input('mobile'),
-				'country'=>$Request->input('country')
-
-			]);if ($insert) {
+		}
+			$adddata=array('email'=>$Request->input('email'),
+			'password'=>md5($Request->input('password')),
+			'firstname'=>$Request->input('firstname'),
+			'lastname'=>$Request->input('lastname'),
+			'mobile'=>$Request->input('mobile'),
+			'country'=>$Request->input('country'));
+			$insert=connect::adminsignin($adddata);
+			if ($insert) {
 				$Request->session()->flash("status","Account created successfully Login To continue");
                      return view('admin.adminlogin'); 
 			}
-			else{
 $Request->session()->flash("status","Failed to create account");
-                    return back();	
-			}
-		}
+                    return back();		
+		
 	}
 	function adminlogin(Request $Request){
 		$Request->flash();
@@ -62,11 +59,11 @@ $Request->session()->flash("status","Failed to create account");
 			'email'=>'required',
 			'password'=>'required|min:6'
 		]);
-		$arry=array(
+		$loginadd=array(
 			'email'=>$Request->input('email'),
 			'password'=>md5($Request->input('password'))
 		);
-		$check=connect::adminlogin($arry);
+		$check=connect::adminlogin($loginadd);
 		if (count($check)>0) {
 $Request->session()->flash("login","logged in successfully");
 $Request->session()->put('email',$Request->input('email'));
@@ -92,28 +89,27 @@ $Request->session()->put('email',$Request->input('email'));
 		if (count($checkcourse)>0) {
 			 $Request->session()->flash("status","course Already exists");
                     return back();
-		}else{
+		}
 		$course_image=$Request->course_image->getClientOriginalName();
 		$course_video=$Request->course_video->getClientOriginalName();
         $upload=$Request->course_image->move(public_path('images'),$course_image);
         $upload1=$Request->course_video->move(public_path('images'),$course_video);
         if ($upload && $upload1) {
-        	$addcourse=connect::addcourse([
-        		'course_id'=>$Request->input('course_id'),
-        		'course_title'=>$Request->input('course_title'),
-        		'course_image'=>$course_image,
-        		'course_video'=>$course_video,
-        		'course_content'=>$Request->input('course_content')]);
+			$addcourses=array('course_id'=>$Request->input('course_id'),
+			'course_title'=>$Request->input('course_title'),
+			'course_image'=>$course_image,
+			'course_video'=>$course_video,
+			'course_content'=>$Request->input('course_content'));
+        	$addcourse=connect::addcourse($addcourses);
         	if ($addcourse) {
                     $Request->session()->flash("status","Successfully added course");
                     return back();
                 }
-                else{
                     $Request->session()->flash("status","failed to add course");
                     return back();
-                }
+            
         	
-        }}
+        }
 	}
 	function add_chapter(Request $Request){
 		$Request->flash();
