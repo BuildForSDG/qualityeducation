@@ -136,12 +136,12 @@ $Request->session()->put('email',$Request->input('email'));
 		$course_video=$Request->video->getClientOriginalName();
         $upload1=$Request->video->move(public_path('images'),$course_video);
         if ($upload1) {
-        	$addcourse=connect::add_chapter([
-        		'course_id'=>$Request->input('course_id'),
-        		'title'=>$Request->input('title'),
-        		'des'=>$Request->input('des'),
-        		'video'=>$course_video,
-        		'c_no'=>$Request->input('c_no')]);
+			$addchap=array('course_id'=>$Request->input('course_id'),
+			'title'=>$Request->input('title'),
+			'des'=>$Request->input('des'),
+			'video'=>$course_video,
+			'c_no'=>$Request->input('c_no'));
+        	$addcourse=connect::add_chapter($addchap);
         	if ($addcourse) {
                     $Request->session()->flash("status","Successfully added chapter");
                     return back();
@@ -204,7 +204,7 @@ function updatejob(Request $Request){
                 } }
 }
 function deletejob(Request $request){
-	$jobid=$request->input('id');
+	$jobid=array($request->input('id'));
 	$res=connect::deletejob($jobid);
 	if ($res) {
 		$res=connect::getalljobs();
@@ -217,8 +217,8 @@ function deletejob(Request $request){
 }
 
 function deletechapter(Request $request){
-	$id1=$request->input('id');
-	$res=connect::deletechapter($id1);
+	$ids=array($request->input('id'));
+	$res=connect::deletechapter($ids);
 	if ($res) {
 		return back();	
 	}else{
@@ -253,34 +253,31 @@ function jobss(Request $Request){
 	$job_upload=$Request->job_attach->getClientOriginalName();
     $upload=$Request->job_attach->move(public_path('images'),$job_upload);
     if ($upload) {
-    	$addcourse=connect::addjob([
-        		'job_title'=>$Request->input('job_title'),
-        		'email'=>$Request->input('email'),
-        		'job_description'=>$Request->input('job_des'),
-        		'job_attachment'=>$job_upload,
-        		'application_deadline'=>$Request->input('date'),
-        		'created_at'=>$dates
-        	]);
+		$addjobs=array('job_title'=>$Request->input('job_title'),
+		'email'=>$Request->input('email'),
+		'job_description'=>$Request->input('job_des'),
+		'job_attachment'=>$job_upload,
+		'application_deadline'=>$Request->input('date'),
+		'created_at'=>$dates);
+    	$addcourse=connect::addjob($addjobs);
         	if ($addcourse) {
                     $Request->session()->flash("job","Successfully added job");
                     return back();
                 }
-                else{
                     $Request->session()->flash("job","failed to add job");
                     return back();
-                } }
+                 }
 }
 function deletes(Request $Request){
 $course_id1=$Request->input('course_id');
-$arr=$course_id1;
-//array('course_id'=>$course_id1);
+$arr=array('course_id'=>$course_id1);
 $ret=connect::deletes($arr);
 if ($ret) {
 	return view('admin.adminmanage');
 }
 }
 function enrol(Request $Request){
-	$course_id1=$Request->input('course_id');
+	$course_id1=array('course_is'=>$course_id1);
 	$res=connect::getall1($course_id1);
 	$result=json_decode($res);
 	$res1=connect::getallc($course_id1);
@@ -290,7 +287,7 @@ function enrol(Request $Request){
 	return view('admin.viewmore',["course"=>$result,'ada'=>$data2,'chapter'=>$data]);
 	}
 	function data(Request $Request){
-		$course_id1=$Request->input('course_id');
+		$course_id1=array('course_id'=>$Request->input('course_id'));
 	$res=connect::getall1($course_id1);
 	$result=json_decode($res);
 	$res1=connect::getallc($course_id1);
