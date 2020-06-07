@@ -2,7 +2,7 @@
 namespace App;
 use Illuminate\Database\Eloquent\Model;
 use DB;
-class connect extends Model
+class connects extends Model
 {
     public static function signin(array $data){
     	  $ret=DB::table("users")->insert($data);

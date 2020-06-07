@@ -2,15 +2,15 @@
 namespace App\Http\Controllers;
 use DB;
 use Hash;
-use App\connect;
+use App\connects;
 use Illuminate\Http\Request;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Response;
 
 class project extends Controller{
 	function index(){
-		$res=connect::getall(session('email'));
-		$result=connect::getalljobs();
+		$res=connects::getall(session('email'));
+		$result=connects::getalljobs();
 		return view('project.index',["courses"=>$res,"jobs"=>$result]);
 	}
 	function courses(){
@@ -24,13 +24,13 @@ class project extends Controller{
 	}
 	function logout1(Request $request){
 		$request->session()->flush();
-		$res=connect::getall(session('email'));
-		$result=connect::getalljobs();
+		$res=connects::getall(session('email'));
+		$result=connects::getalljobs();
 		return view('project.index',["courses"=>$res,"jobs"=>$result]);
 	}
 	function signin(Request $Request){
 		$data1=array('email'=>$Request->input('email'));
-		$account=connect::check($data1);
+		$account=connects::check($data1);
 		if (count($account)>0) {
 $Request->session()->flash("status","User Arleady exists");
 					return back();
@@ -45,7 +45,7 @@ $Request->session()->flash("status","User Arleady exists");
 				'gender'=>$Request->input('gender'),
 				'DOB'=>$Request->input('dob')
 			);
-			$insert=connect::signin($data);if ($insert) {
+			$insert=connects::signin($data);if ($insert) {
 				$Request->session()->flash("status","Account created successfully Login To continue");
                      return view('project.login'); 
 			}
@@ -64,7 +64,7 @@ $Request->session()->flash("status","Failed to create account");
 
 		]);
 		$email=array('email'=>$Request->input('email'));
-		$check=connect::check($email);
+		$check=connects::check($email);
 		if (count($check)>0) {
 $Request->session()->flash("status","User Arleady exists");
                     return back();
@@ -80,7 +80,7 @@ $Request->session()->flash("status","User Arleady exists");
 				'gender'=>$Request->input('gender'),
 				'DOB'=>$Request->input('dob')
 			);
-			$insert=connect::signin($info);
+			$insert=connects::signin($info);
 			if($insert) {
 				$Request->session()->flash("status","Account created successfully Login To continue");
                      return view('project.login'); 
@@ -99,11 +99,11 @@ $Request->session()->flash("status","Failed to create account");
 			'email'=>$Request->input('email'),
 			'password'=>md5($Request->input('password'))
 		);
-		$check=connect::userlogin($arry);
+		$check=connects::userlogin($arry);
 		if (count($check)>0) {
 $Request->session()->flash("login","logged in successfully");
 $Request->session()->put('email',$Request->input('email'));
-        $res=connect::getall(session('email'));
+        $res=connects::getall(session('email'));
 		//$datas=json_decode($res);
 		return view('project.index',["courses"=>$res]);     
 		}else{
@@ -125,7 +125,7 @@ $Request->session()->put('email',$Request->input('email'));
         $upload=$Request->course_image->move(public_path('images'),$course_image);
         $upload1=$Request->course_video->move(public_path('images'),$course_video);
         if ($upload && $upload1) {
-        	$addcourse=connect::addcourse([
+        	$addcourse=connects::addcourse([
         		'course_id'=>$Request->input('course_id'),
         		'course_title'=>$Request->input('course_title'),
         		'course_image'=>$course_image,
@@ -143,26 +143,26 @@ $Request->session()->put('email',$Request->input('email'));
         }
 	}
 function morecourses(){
-	$res=connect::getall(session('email'));
+	$res=connects::getall(session('email'));
 	return view('project.allcourses',["courses"=>$res]);
 }
 function profile(){
 	$email=array(
 		'email'=>session('email')
 	);
-	$res=connect::getprofile($email);
+	$res=connects::getprofile($email);
 	$result=json_decode($res);
 	return view('project.profile',["profile"=>$result]);
 }
 function jobs(){
-	$res=connect::getalljobs();
+	$res=connects::getalljobs();
 	return view('project.jobs',["jobs"=>$res]);
 }
 function enrols(Request $Request){
 	$course_id1=$Request->input('course_id');
-	$res=connect::getall1($course_id1);
+	$res=connects::getall1($course_id1);
 	$result=json_decode($res);
-	$res1=connect::getallc($course_id1);
+	$res1=connects::getallc($course_id1);
 	$data=json_decode($res1);
 	$res12="";
 	$data2=json_decode($res12);
@@ -170,16 +170,16 @@ function enrols(Request $Request){
 	}
 	function datum(Request $Request){
 		$course_id1=array($Request->input('course_id'));
-	$res=connect::getall1($course_id1);
+	$res=connects::getall1($course_id1);
 	$result=json_decode($res);
-	$res1=connect::getallc($course_id1);
+	$res1=connects::getallc($course_id1);
 	$data=json_decode($res1);
 	$var=array(
 		'id'=>$Request->input('id'),
 		'c_no'=>$Request->input('c_no')
 
 	);
-		$res12=connect::getallch($var);
+		$res12=connects::getallch($var);
 		$data2=json_decode($res12);
 	return view('project.learn',['ada'=>$data2,"course"=>$result,'chapter'=>$data]);
 
@@ -188,11 +188,11 @@ function enrol(Request $Request){
 	$course_id1=$Request->input('course_id');
 	$course_id2=array($Request->input('course_id'));
 	$arr=array('email'=>session('email'),'course_id'=>$course_id1);
-	$check=connect::checkenrol($arr);
+	$check=connects::checkenrol($arr);
 	if (count($check)>0) {
-	$res=connect::getall1($course_id2);
+	$res=connects::getall1($course_id2);
 	$result=json_decode($res);
-	$res1=connect::getallc($course_id2);
+	$res1=connects::getallc($course_id2);
 	$data=json_decode($res1);
 	$res12="";
 	$data2=json_decode($res12);
@@ -202,11 +202,11 @@ function enrol(Request $Request){
 		$comenrol=array('email'=>session('email'),
 		'course_id'=>$course_id1,
 		'enrol'=>$enrolled);
-	$enrol=connect::enrolcourse($comenrol);
+	$enrol=connects::enrolcourse($comenrol);
 	if ($enrol) {
-	$res=connect::getall1($course_id1);
+	$res=connects::getall1($course_id1);
 	$result=json_decode($res);
-	$res1=connect::getallc($course_id1);
+	$res1=connects::getallc($course_id1);
 	$data=json_decode($res1);
 	$res12="";
 	$data2=json_decode($res12);
@@ -236,7 +236,7 @@ function jobss(Request $Request){
 		'job_attach'=>$job_upload,
 		'date'=>$Request->input('date'),
 		'create'=>$dates);
-    	$addcourse=connect::addjob();
+    	$addcourse=connects::addjob();
         	if ($addcourse) {
                     $Request->session()->flash("job","Successfully added job");
                     return back();

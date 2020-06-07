@@ -2,7 +2,7 @@
 namespace App\Http\Controllers;
 use DB;
 use Hash;
-use App\connect;
+use App\connects;
 use Illuminate\Http\Request;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Response;
@@ -32,7 +32,7 @@ class admin extends Controller{
 
 		]);
 		$emailch=array('email'=>$Request->input('email'));
-		$check=connect::checkadmin($emailch);
+		$check=connects::checkadmin($emailch);
 		if (count($check)>0) {
         $Request->session()->flash("status","User Arleady exists");
                     return back();
@@ -44,7 +44,7 @@ class admin extends Controller{
 			'lastname'=>$Request->input('lastname'),
 			'mobile'=>$Request->input('mobile'),
 			'country'=>$Request->input('country'));
-			$insert=connect::adminsignin($adddata);
+			$insert=connects::adminsignin($adddata);
 			if ($insert) {
 				$Request->session()->flash("status","Account created successfully Login To continue");
                      return view('admin.adminlogin'); 
@@ -63,7 +63,7 @@ $Request->session()->flash("status","Failed to create account");
 			'email'=>$Request->input('email'),
 			'password'=>md5($Request->input('password'))
 		);
-		$check=connect::adminlogin($loginadd);
+		$check=connects::adminlogin($loginadd);
 		if (count($check)>0) {
 $Request->session()->flash("login","logged in successfully");
 $Request->session()->put('email',$Request->input('email'));
@@ -84,7 +84,7 @@ $Request->session()->put('email',$Request->input('email'));
 		$details=array(
 		'course_id'=>$Request->input('course_id'),
         'course_title'=>$Request->input('course_title'));
-		$checkcourse=connect::checkaddcourse($details);
+		$checkcourse=connects::checkaddcourse($details);
 		if (count($checkcourse)>0) {
 			 $Request->session()->flash("status","course Already exists");
                     return back();
@@ -99,7 +99,7 @@ $Request->session()->put('email',$Request->input('email'));
 			'course_image'=>$course_image,
 			'course_video'=>$course_video,
 			'course_content'=>$Request->input('course_content'));
-        	$addcourse=connect::addcourse($addcourses);
+        	$addcourse=connects::addcourse($addcourses);
         	if ($addcourse) {
                     $Request->session()->flash("status","Successfully added course");
                     return back();
@@ -122,7 +122,7 @@ $Request->session()->put('email',$Request->input('email'));
 			'course_id'=>$Request->input('course_id'),
 			'c_no'=>$Request->input('c_no')
 		);
-		$check=connect::checkchapter($arr);
+		$check=connects::checkchapter($arr);
 		if (count($check)>0) {
 			$Request->session()->flash("status","chapter Already exist");
                     return back();
@@ -136,7 +136,7 @@ $Request->session()->put('email',$Request->input('email'));
 			'des'=>$Request->input('des'),
 			'video'=>$course_video,
 			'c_no'=>$Request->input('c_no'));
-        	$addcourse=connect::add_chapter($addchap);
+        	$addcourse=connects::add_chapter($addchap);
         	if ($addcourse) {
                     $Request->session()->flash("status","Successfully added chapter");
                     return back();
@@ -150,18 +150,18 @@ $Request->session()->put('email',$Request->input('email'));
 
 	}
 function admin(){
-	$res=connect::getall(session('email'));
+	$res=connects::getall(session('email'));
 	return view('admin.adminmanage',["courses"=>$res]);
 }
 function deletecourse(Request $request){
 	$idss=array('course_id'=>$request->input('id'));
-	$res=connect::deletecourse($idss);
+	$res=connects::deletecourse($idss);
 	if ($res) {
-		$res=connect::getall(session('email'));
+		$res=connects::getall(session('email'));
 	return view('admin.adminmanage',["courses"=>$res]);
 	}
 	else{
-		$res=connect::getall(session('email'));
+		$res=connects::getall(session('email'));
 	return view('admin.adminmanage',["courses"=>$res]);
 	}
 	return view('admin.adminmanage',["courses"=>$res]);
@@ -188,7 +188,7 @@ function updatejob(Request $Request){
         		'created_at'=>$dates
     );
     if ($upload) {
-    	$addcourse=connect::updatejob($jobid,$details);
+    	$addcourse=connects::updatejob($jobid,$details);
         	if ($addcourse) {
                     $Request->session()->flash("jobup","Successfully updated job");
 	               return back();
@@ -200,20 +200,20 @@ function updatejob(Request $Request){
 }
 function deletejob(Request $request){
 	$jobid=array($request->input('id'));
-	$res=connect::deletejob($jobid);
+	$res=connects::deletejob($jobid);
 	if ($res) {
-		$res=connect::getalljobs();
+		$res=connects::getalljobs();
 	return view('admin.managejobs',["jobs"=>$res]);
 	}
 	else{
-		$res=connect::getalljobs();
+		$res=connects::getalljobs();
 	return view('admin.managejobs',["jobs"=>$res]);
 	}
 }
 
 function deletechapter(Request $request){
 	$ids=array($request->input('id'));
-	$res=connect::deletechapter($ids);
+	$res=connects::deletechapter($ids);
 	if ($res) {
 		return back();	
 	}else{
@@ -221,11 +221,11 @@ function deletechapter(Request $request){
 		}
 }
 function manage(){
-	$res=connect::getall(session('email'));
+	$res=connects::getall(session('email'));
 	return view('admin.adminmanage',["courses"=>$res]);
 }
 function managejob(){
-	$res=connect::getalljobs();
+	$res=connects::getalljobs();
 	return view('admin.managejobs',["jobs"=>$res]);
 }
 function addjob(){
@@ -254,7 +254,7 @@ function jobss(Request $Request){
 		'job_attachment'=>$job_upload,
 		'application_deadline'=>$Request->input('date'),
 		'created_at'=>$dates);
-    	$addcourse=connect::addjob($addjobs);
+    	$addcourse=connects::addjob($addjobs);
         	if ($addcourse) {
                     $Request->session()->flash("job","Successfully added job");
                     return back();
@@ -266,7 +266,7 @@ function jobss(Request $Request){
 function deletes(Request $Request){
 $course_id1=$Request->input('course_id');
 $arr=array('course_id'=>$course_id1);
-$ret=connect::deletes($arr);
+$ret=connects::deletes($arr);
 if ($ret) {
 	return view('admin.adminmanage');
 }
@@ -274,9 +274,9 @@ if ($ret) {
 function enrol(Request $Request){
 	$course=$Request->input("course_id");
 	$course_id1=array('course_id'=>$course);
-	$res=connect::getall1($course_id1);
+	$res=connects::getall1($course_id1);
 	$result=json_decode($res);
-	$res1=connect::getallc($course_id1);
+	$res1=connects::getallc($course_id1);
 	$data=json_decode($res1);
 	$res12="";
 	$data2=json_decode($res12);
@@ -284,16 +284,16 @@ function enrol(Request $Request){
 	}
 	function data(Request $Request){
 		$course_id1=array('course_id'=>$Request->input('course_id'));
-	$res=connect::getall1($course_id1);
+	$res=connects::getall1($course_id1);
 	$result=json_decode($res);
-	$res1=connect::getallc($course_id1);
+	$res1=connects::getallc($course_id1);
 	$data=json_decode($res1);
 	$var=array(
 		'id'=>$Request->input('id'),
 		'c_no'=>$Request->input('c_no')
 
 	);
-		$res12=connect::getallch($var);
+		$res12=connects::getallch($var);
 		$data2=json_decode($res12);
 	return view('admin.viewmore',['ada'=>$data2,"course"=>$result,'chapter'=>$data]);
 
