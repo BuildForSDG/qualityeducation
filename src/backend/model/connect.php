@@ -124,8 +124,6 @@ $ret=DB::select("SELECT courses.course_id,courses.course_title,courses.course_co
         if ($ret) {
            $ret=DB::table("enrolled")->where($data)->delete();
            return $ret;
-        }else{
-            echo "failed";
         }
     }
 
