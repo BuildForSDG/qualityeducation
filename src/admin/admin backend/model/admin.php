@@ -273,7 +273,8 @@ if ($ret) {
 }
 }
 function enrol(Request $Request){
-	$course_id1=array('course_is'=>$course_id1);
+	$course=$Request->input("course_id");
+	$course_id1=array('course_id'=>$course);
 	$res=connect::getall1($course_id1);
 	$result=json_decode($res);
 	$res1=connect::getallc($course_id1);
