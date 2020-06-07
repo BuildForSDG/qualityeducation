@@ -278,9 +278,6 @@ $ret=connect::deletes($arr);
 if ($ret) {
 	return view('admin.adminmanage');
 }
-else{
-	print_r("failed to delete");
-}
 }
 function enrol(Request $Request){
 	$course_id1=$Request->input('course_id');

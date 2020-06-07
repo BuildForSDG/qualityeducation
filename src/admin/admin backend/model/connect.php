@@ -55,7 +55,6 @@ class connect extends Model
     }
     public static function updatejob($jobid,array $data){
         $ret=DB::table("jobs")->where('job_id','=',$jobid)->update($data);
-        print_r($ret);
         return $ret;
     }
       public static function addcourse(array $data){
@@ -122,8 +121,6 @@ $ret=DB::select("SELECT courses.course_id,courses.course_title,courses.course_co
         if ($ret) {
            $ret=DB::table("enrolled")->where('course_id','=',$data)->delete();
            return $ret;
-        }else{
-            echo "failed";
         }
     }
 

@@ -29,15 +29,14 @@ class project extends Controller{
 		return view('project.index',["courses"=>$res,"jobs"=>$result]);
 	}
 	function signin(Request $Request){
-		$check1=connect::check([
-			'email'=>$Request->input('email')]);
-		if (count($check1)>0) {
+		$data1=array('email'=>$Request->input('email'));
+		$account=connect::check($data1);
+		if (count($account)>0) {
 $Request->session()->flash("status","User Arleady exists");
-                    return back();
-                
-		}else{
-			$insert=connect::signin([
-				'email'=>$Request->input('email'),
+					return back();
+				}
+				$data=array(
+					'email'=>$Request->input('email'),
 				'password'=>md5($Request->input('pwd')),
 				'firstname'=>$Request->input('faname'),
 				'lastname'=>$Request->input('laname'),
@@ -45,15 +44,13 @@ $Request->session()->flash("status","User Arleady exists");
 				'country'=>$Request->input('country'),
 				'gender'=>$Request->input('gender'),
 				'DOB'=>$Request->input('dob')
-
-			]);if ($insert) {
+			);
+			$insert=connect::signin($data);if ($insert) {
 				$Request->session()->flash("status","Account created successfully Login To continue");
                      return view('project.login'); 
 			}
-			else{
 $Request->session()->flash("status","Failed to create account");	
-			}
-		}
+		
 	}
 	function adminregister(Request $Request){
 		$Request->flash();
@@ -66,14 +63,14 @@ $Request->session()->flash("status","Failed to create account");
 			'password'=>'required|min:6'
 
 		]);
-		$check=connect::check([
-			'email'=>$Request->input('email')]);
+		$email=array('email'=>$Request->input('email'));
+		$check=connect::check($email);
 		if (count($check)>0) {
 $Request->session()->flash("status","User Arleady exists");
                     return back();
                 
-		}else{
-			$insert=connect::signin([
+		}
+			$info=array(
 				'email'=>$Request->input('email'),
 				'password'=>md5($Request->input('pwd')),
 				'firstname'=>$Request->input('faname'),
@@ -82,16 +79,14 @@ $Request->session()->flash("status","User Arleady exists");
 				'country'=>$Request->input('country'),
 				'gender'=>$Request->input('gender'),
 				'DOB'=>$Request->input('dob')
-
-			]);if ($insert) {
+			);
+			$insert=connect::signin($info);if ($insert) {
 				$Request->session()->flash("status","Account created successfully Login To continue");
                      return view('project.login'); 
 			}
-			else{
 $Request->session()->flash("status","Failed to create account");
                     //return back();	
-			}
-		}
+		
 	}
 	function userlogin(Request $Request){
 		$Request->flash();
@@ -181,7 +176,7 @@ function enrols(Request $Request){
 	return view('admin.viewmore',["course"=>$result,'ada'=>$data2,'chapter'=>$data]);
 	}
 	function datum(Request $Request){
-		$course_id1=$Request->input('course_id');
+		$course_id1=array($Request->input('course_id'));
 	$res=connect::getall1($course_id1);
 	$result=json_decode($res);
 	$res1=connect::getallc($course_id1);
@@ -198,23 +193,23 @@ function enrols(Request $Request){
 	}
 function enrol(Request $Request){
 	$course_id1=$Request->input('course_id');
+	$course_id2=array($Request->input('course_id'));
 	$arr=array('email'=>session('email'),'course_id'=>$course_id1);
 	$check=connect::checkenrol($arr);
 	if (count($check)>0) {
-	$res=connect::getall1($course_id1);
+	$res=connect::getall1($course_id2);
 	$result=json_decode($res);
-	$res1=connect::getallc($course_id1);
+	$res1=connect::getallc($course_id2);
 	$data=json_decode($res1);
 	$res12="";
 	$data2=json_decode($res12);
 	return view('project.learn',["course"=>$result,'ada'=>$data2,'chapter'=>$data]);
 	}else{
 		$enrolled="enrolled";
-	$enrol=connect::enrolcourse([
-		'email'=>session('email'),
+		$comenrol=array('email'=>session('email'),
 		'course_id'=>$course_id1,
-		'enrol'=>$enrolled
-	]);
+		'enrol'=>$enrolled);
+	$enrol=connect::enrolcourse($comenrol);
 	if ($enrol) {
 	$res=connect::getall1($course_id1);
 	$result=json_decode($res);
@@ -243,21 +238,19 @@ function jobss(Request $Request){
 	$job_upload=$Request->job_attach->getClientOriginalName();
     $upload=$Request->job_attach->move(public_path('images'),$job_upload);
     if ($upload) {
-    	$addcourse=connect::addjob([
-        		'job_title'=>$Request->input('job_title'),
-        		'job_des'=>$Request->input('job_des'),
-        		'job_attach'=>$job_upload,
-        		'date'=>$Request->input('date'),
-        		'create'=>$dates
-        	]);
+		$adddata=array('job_title'=>$Request->input('job_title'),
+		'job_des'=>$Request->input('job_des'),
+		'job_attach'=>$job_upload,
+		'date'=>$Request->input('date'),
+		'create'=>$dates);
+    	$addcourse=connect::addjob();
         	if ($addcourse) {
                     $Request->session()->flash("job","Successfully added job");
                     return back();
                 }
-                else{
                     $Request->session()->flash("job","failed to add job");
                     return back();
-                } }
+                 }
 }
 
 }
