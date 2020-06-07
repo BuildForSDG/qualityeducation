@@ -49,6 +49,10 @@ class connect extends Model
     	$ret=DB::table("users")->where($data)->get();
     	return $ret;
     }
+    public static function getprofile(array $data){
+        $ret=DB::table("users")->where($data)->get();
+        return $ret;
+    }
     public static function adminlogin(array $data){
         $ret=DB::table("admin")->where($data)->get();
         return $ret;
@@ -64,6 +68,10 @@ class connect extends Model
     }
     public static function checkchapter(array $data){
         $ret=DB::table("chapters")->where($data)->get();
+        return $ret;
+    }
+    public static function checkaddcourse(array $data){
+        $ret=DB::table("courses")->where($data)->get();
         return $ret;
     }
     public static function add_chapter(array $data){

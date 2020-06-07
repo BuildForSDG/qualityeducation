@@ -150,6 +150,14 @@ function morecourses(){
 	$res=connect::getall(session('email'));
 	return view('project.allcourses',["courses"=>$res]);
 }
+function profile(){
+	$email=array(
+		'email'=>session('email')
+	);
+	$res=connect::getprofile($email);
+	$result=json_decode($res);
+	return view('project.profile',["profile"=>$result]);
+}
 function admin(){
 	$res=connect::getall(session('email'));
 	return view('project.admin');
