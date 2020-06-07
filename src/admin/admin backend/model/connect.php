@@ -36,12 +36,12 @@ class connect extends Model
         }
         return $ret;
     }
-    public static function deletejob($data){
-            $ret1=DB::table("jobs")->where('job_id','=',$data)->delete();  
+    public static function deletejob(array $data){
+            $ret1=DB::table("jobs")->where($data)->delete();  
         return $ret1;
     }
-    public static function deletechapter($data){
-            $ret1=DB::table("chapters")->where('c_no','=',$data)->delete();  
+    public static function deletechapter(array $data){
+            $ret1=DB::table("chapters")->where($data)->delete();  
         return $ret1;
     }
 
@@ -86,13 +86,13 @@ $ret=DB::select("SELECT courses.course_id,courses.course_title,courses.course_co
         $ret=DB::select("SELECT * FROM jobs ORDER by created_at DESC");
             return $ret;
     }
-    public static function getall1($id){
-        $ret=DB::table("courses")->where('course_id','=',$id)->get();
+    public static function getall1(array $idss){
+        $ret=DB::table("courses")->where($idss)->get();
         return $ret;
     }
 
-     public static function getallc($data){
-        $ret=DB::table("chapters")->where('course_id','=',$data)->get();
+     public static function getallc(array $data){
+        $ret=DB::table("chapters")->where($data)->get();
         return $ret;
     }
     public static function getallch(array $data){
@@ -116,10 +116,10 @@ $ret=DB::select("SELECT courses.course_id,courses.course_title,courses.course_co
         return $ret;
 
     }
-    public static function deletes($data){
-        $ret=DB::table("courses")->where('course_id','=',$data)->delete();
+    public static function deletes(array $data){
+        $ret=DB::table("courses")->where($data)->delete();
         if ($ret) {
-           $ret=DB::table("enrolled")->where('course_id','=',$data)->delete();
+           $ret=DB::table("enrolled")->where($data)->delete();
            return $ret;
         }
     }

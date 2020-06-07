@@ -153,14 +153,6 @@ function profile(){
 	$result=json_decode($res);
 	return view('project.profile',["profile"=>$result]);
 }
-function admin(){
-	$res=connect::getall(session('email'));
-	return view('project.admin');
-}
-function manage(){
-	$res=connect::getall(session('email'));
-	return view('project.adminmanage',["courses"=>$res]);
-}
 function jobs(){
 	$res=connect::getalljobs();
 	return view('project.jobs',["jobs"=>$res]);
