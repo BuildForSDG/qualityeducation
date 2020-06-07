@@ -68,10 +68,9 @@ $Request->session()->flash("status","Failed to create account");
 $Request->session()->flash("login","logged in successfully");
 $Request->session()->put('email',$Request->input('email'));
 		return view('admin.addcourse');   
-		}else{
+		}
 			$Request->session()->flash("login","wrong username or password");
                     return back(); 
-		}
 
 	}
 	function course(Request $Request){
@@ -155,8 +154,8 @@ function admin(){
 	return view('admin.adminmanage',["courses"=>$res]);
 }
 function deletecourse(Request $request){
-	$id=$request->input('id');
-	$res=connect::deletecourse($id);
+	$idss=array('course_id'=>$request->input('id'));
+	$res=connect::deletecourse($idss);
 	if ($res) {
 		$res=connect::getall(session('email'));
 	return view('admin.adminmanage',["courses"=>$res]);
