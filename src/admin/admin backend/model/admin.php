@@ -127,7 +127,7 @@ $Request->session()->put('email',$Request->input('email'));
 			$Request->session()->flash("status","chapter Already exist");
                     return back();
 		}
-		else{
+
 		$course_video=$Request->video->getClientOriginalName();
         $upload1=$Request->video->move(public_path('images'),$course_video);
         if ($upload1) {
@@ -146,7 +146,7 @@ $Request->session()->put('email',$Request->input('email'));
                     return back();
                 }
         	
-        }}
+        }
 
 	}
 function admin(){
