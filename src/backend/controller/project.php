@@ -80,7 +80,8 @@ $Request->session()->flash("status","User Arleady exists");
 				'gender'=>$Request->input('gender'),
 				'DOB'=>$Request->input('dob')
 			);
-			$insert=connect::signin($info);if ($insert) {
+			$insert=connect::signin($info);
+			if($insert) {
 				$Request->session()->flash("status","Account created successfully Login To continue");
                      return view('project.login'); 
 			}
