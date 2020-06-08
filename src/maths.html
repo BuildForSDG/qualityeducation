@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
-    <link href="Imgs/maths.css" rel="stylesheet" type="text/css">
+    <link href="math.css" rel="stylesheet" type="text/css">
     <title>Mathematics</title>
 </head>
 <body>
@@ -15,10 +15,10 @@
 
     
      <div class="menu">
-        <button class="btn 1" onclick="myFunction2">Overview</button>
-        <button class="btn" onclick="myFunction">Modules</button>
-        <button class="btn" onclick="myFunction3">Schedules</button>
-        <button class="btn" onclick="myFunction4">Certification/Exams</button>
+        <button class="btn 1" onclick="return myFunction2();">Overview</button>
+        <button class="btn" onclick="return myFunction()">Modules</button>
+        <button class="btn" onclick="return myFunction3();">Schedules</button>
+        <button class="btn" onclick="return myFunction4();">Certification/Exams</button>
      </div>
 
   
@@ -131,40 +131,41 @@
     </div>
 
    <script>
-    function myFunction2() {
   var x = document.getElementById("overviewContent");
-  if (x.style.display === "none") {
-    x.style.display = "block";
-  } else {
-    x.style.display = "none";
-  }
+  var x1 = document.getElementById("modulesContent");
+  var x2 = document.getElementById("scheduleContent");
+  var x3 = document.getElementById("examContent");
+  x.style.display="block";
+   x1.style.display="none";
+    x2.style.display="none";
+     x3.style.display="none";
+
+    function myFunction2() {
+x.style.display="block";
+   x1.style.display="none";
+    x2.style.display="none";
+     x3.style.display="none";
 }
 
     function myFunction() {
-  var x = document.getElementById("modulesContent");
-  if (x.style.display === "none") {
-    x.style.display = "block";
-  } else {
-    x.style.display = "none";
-  }
+  x.style.display="none";
+   x1.style.display="block";
+    x2.style.display="none";
+     x3.style.display="none";
 }
 
 function myFunction3() {
-  var x = document.getElementById("scheduleContent");
-  if (x.style.display === "none") {
-    x.style.display = "block";
-  } else {
-    x.style.display = "none";
-  }
+  x.style.display="none";
+   x1.style.display="none";
+    x2.style.display="block";
+     x3.style.display="none";
 }
 
 function myFunction4() {
-  var x = document.getElementById("examContent");
-  if (x.style.display === "none") {
-    x.style.display = "block";
-  } else {
-    x.style.display = "none";
-  }
+  x.style.display="none";
+   x1.style.display="none";
+    x2.style.display="none";
+     x3.style.display="block";
 }
    </script>
     
