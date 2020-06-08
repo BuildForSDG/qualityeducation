@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+    <link href="Imgs/maths.css" rel="stylesheet" type="text/css">
+    <title>Mathematics</title>
+</head>
+<body>
+
+    <img src="Imgs/icons8-home-24.png" alt="">
+    <p>MATHEMATICS</p>
+
+    
+     <div class="menu">
+        <button class="btn 1" onclick="myFunction2">Overview</button>
+        <button class="btn" onclick="myFunction">Modules</button>
+        <button class="btn" onclick="myFunction3">Schedules</button>
+        <button class="btn" onclick="myFunction4">Certification/Exams</button>
+     </div>
+
+  
+   
+   
+
+    <div class="content">
+        <!--Overview Content-->
+        <div id="overviewContent">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda recusandae aspernatur, magni repellendus laboriosam, facere officia quos libero illum dignissimos harum autem ea rem architecto? Debitis, culpa! Esse, quia amet!</p>
+        </div>
+
+        <!--Modules Content-->
+        <div id="modulesContent">
+            <table>
+               <tr>
+                <th>Code</th>
+                <th>Course</th>
+                <th>Duration</th>
+               </tr>
+               <tr>
+                   <td>MAT</td>
+                   <td>Elementary Mathematics</td>
+                   <td>250 hours</td>
+               </tr>
+
+            </table>
+        </div>
+
+        <!--Schedule Content-->
+        <div id="scheduleContent">
+            <table>
+                <tr>
+                    <th>Start Date</th>
+                    <th>Time</th>
+                    <th>Duration</th>
+                    <th>Location</th>
+                </tr>
+                <tr>
+                    <td>Jan 5 2020</td>
+                    <td>9.00am - 5.00pm</td>
+                    <td>10 days</td>
+                    <td>Nairobi</td>
+                </tr>
+                <tr>
+                    <td>Feb 5 2020</td>
+                    <td>9.00am - 5.00pm</td>
+                    <td>10 days</td>
+                    <td>Nairobi</td>
+                </tr>
+                <tr>
+                    <td>Mar 5 2020</td>
+                    <td>9.00am - 5.00pm</td>
+                    <td>10 days</td>
+                    <td>Nairobi</td>
+                </tr>
+                <tr>
+                    <td>Apr 5 2020</td>
+                    <td>9.00am - 5.00pm</td>
+                    <td>10 days</td>
+                    <td>Nairobi</td>
+                </tr>
+            </table>
+        </div>
+
+        <!--Exam Content-->
+        <div id="examContent">
+            <p>No exams/certifications to display at the moment.</p>
+        </div>
+
+        <button class="btn-2">ENROLL</button>
+
+    </div>
+
+
+    <div class="enquire">
+        <div class="heading">Enquiry</div>
+        <input class="z" type="text" id="math" placeholder="Mathematics">
+        <input class="z" type="text" id="name" placeholder="Your Name*">
+        <input class="z" type="email" id="email" placeholder="Email*">
+        <input class="z" type="number" id="telephone" placeholder="Phone Number">
+        <input type="text" id="message" placeholder="Your enquiry*">
+        <button>ENQUIRE</button>
+    </div>
+
+    <div class="footer">
+        <div class="section1">
+            <img src="Imgs/icons8-phone-48.png" alt="phone"><p class="phone">+254 701 255 700</p><br>
+            <img src="Imgs/icons8-important-mail-24.png" alt="mail"><p class="email">info@fundisha.co.ke</p><br>
+            <img src="Imgs/icons8-location-26.png" alt="location"><p class="location">1st floor Avenue Towers, Nairobi.</p><br>
+        </div>
+
+        <div class="section2">
+            <a href="">Jobs</a>
+            <a href="">Courses</a>
+            <a href="">About Us</a>
+            <a href="">Contact Us</a>
+        </div>
+
+        <div class="section3">
+            <a href="">Blog</a>
+            <a href="">FAQs</a>
+            <a href="">Privacy Policy</a>
+            <a href="">Terms & Conditions</a>
+        </div>
+    
+
+        <p class="fundisha">FUNDISHA</p>
+        <p class="copyright">Copyright © 2020. All rights Reserved.</p>
+    </div>
+
+   <script>
+    function myFunction2() {
+  var x = document.getElementById("overviewContent");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+
+    function myFunction() {
+  var x = document.getElementById("modulesContent");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+
+function myFunction3() {
+  var x = document.getElementById("scheduleContent");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+
+function myFunction4() {
+  var x = document.getElementById("examContent");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+   </script>
+    
+    
+</body>
+</html>
