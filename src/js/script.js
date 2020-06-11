@@ -2,7 +2,6 @@
 //SIGN UP FORM VALIDATION
 $(document).ready(function () {
     $("#register").click(function () {
-        var allLetters = /^[a-zA-Z]+$/;
         var letter = /[a-zA-Z]/;
         var fname = document.getElementById("fname").value;
         var lname = document.getElementById("lname").value;
