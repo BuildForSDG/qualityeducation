@@ -99,6 +99,11 @@ input{
     text-decoration: underline;
     line-height: 50px;
 }
+.footer a:hover{
+    color: white;
+    text-decoration: underline;
+    line-height: 50px;
+}
 /*Responsiveness*/
 
 @media screen and (max-width: 480px){
