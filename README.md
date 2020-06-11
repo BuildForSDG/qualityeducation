@@ -4,8 +4,10 @@
 
 
 ## About
-##"FUNDISHA" 
-An online education platform that offers tutoring and job placement to teachers.Solves a problem of teacher student ratio in developing countries.
+
+## FUNDISHA 
+An online education platform that offers tutoring and job placement for teachers.
+Solves the problem of teacher student ratio in developing countries.
 
 ![images.jpg](https://github.com/BuildForSDG/team-260-qualityeducation/blob/feature/src/Assets/screenshots/images.jpg) 
 
