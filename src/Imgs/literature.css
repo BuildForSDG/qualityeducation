@@ -99,6 +99,11 @@ input{
     text-decoration: underline;
     line-height: 50px;
 }
+.footer a:hover{
+    color: white;
+    text-decoration: underline;
+    line-height: 50px;
+}
 /*Responsiveness*/
 
 @media screen and (max-width: 480px){
@@ -620,53 +625,53 @@ input{
         padding-top:80px;
     }
     .menu button{
-        font-size:30px;
-        padding:15px;
+        font-size: 30px;
+        padding: 15px;
     }
     .btn-2{
-        font-size:25px;
+        font-size: 25px;
         position: absolute;
-        left:0;
+        left: 0;
         bottom: 0;
-        margin:20px;
+        margin: 20px;
     }
     .heading{
-        border-top:none;
-        font-size:30px;
+        border-top: none;
+        font-size: 30px;
     }
     .enquire{
-        border-bottom:none;
-        margin-left:850px;
+        border-bottom: none;
+        margin-left: 850px;
         position: relative;
-        top:-600px;
+        top: -600px;
     }
     .z,
     #message{
-        padding:20px;
-        margin:15px;
-        width:300px;
+        padding: 20px;
+        margin: 15px;
+        width: 300px;
     }
     #message{
-        height:400px;
+        height: 400px;
     }
     .enquire button{
-        margin-left:120px;
-        font-size:25px;
-        margin-top:20px;
+        margin-left: 120px;
+        font-size: 25px;
+        margin-top: 20px;
     }
     .footer{
-        height:750px;
+        height: 750px;
     }
     .footer p{
-        font-size:30px;
-        padding:20px;
+        font-size: 30px;
+        padding: 20px;
     }
     .footer img{
-        width:40px;
-        height:40px;
+        width: 40px;
+        height: 40px;
     }
     .footer a{
-        font-size:25px;
-        padding:10px;
+        font-size: 25px;
+        padding: 10px;
     }
 }
