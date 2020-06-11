@@ -1,0 +1,673 @@
+body{
+    background-color:#03396C;
+}
+p{
+    color:white;
+    text-align: center;
+    margin-top:-10px;
+
+}
+.menu button{
+    border:none;
+    color:#E2AF6D;
+    background-color: #03396C;
+    border: 1px solid #E2AF6D;
+    align-items: flex-end;
+    box-shadow: 1px 0px 2px 1px;
+    border-top:none;
+}
+.content{
+    border: 1px solid #E2AF6D;
+}
+table{
+    color:white;
+    font-family:'quicksand';
+    font-weight:normal;
+    margin-right: auto;
+    margin-left:auto;
+}
+th{
+    background-color: #E2AF6D;
+    color:#03396C;
+}
+.btn-2{
+    background-color: #E2AF6D;
+    border:1px solid #E2AF6D;
+    box-shadow: 0 4px 6px -1px white;
+    color:#03396C;
+    font-family:'roboto';
+    font-weight:normal;
+    padding:5px 15px;
+
+}
+.enquire{
+    border-bottom:1px solid white;
+}
+.heading{
+    color:#E2AF6D;
+    font-family:'quicksand';
+    font-weight:normal;
+    text-align: center;
+    border-top:1px solid white;
+
+}
+input{
+    display:flex;
+    background-color: #E2AF6D;
+    border-radius:20px;
+    border:none;
+    text-align:center;
+    margin:10px;
+}
+.enquire button{
+    background-color: #03396C;
+    color:#E2AF6D;
+    border:1px solid #E2AF6D;
+    padding:5px 15px;
+    box-shadow: 0 4px 6px -1px white;
+}
+#message{
+    border-radius:5px;
+    text-align:left;
+}
+.footer{
+    background-color: black;
+    color:white;
+    text-align:center;
+    opacity:;
+    padding:20px;
+}
+.section1 img{
+    width:25px;
+    height:25px;
+}
+.fundisha{
+    font-weight: bold;
+    font-family: 'quicksand';
+}
+.copyright{
+    font-family:'roboto';
+}
+.section1{
+    font-weight: normal;
+    font-family:'quicksand';
+}
+.footer{
+    margin-top:45px;
+}
+.footer a{
+    color:#E2AF6D;
+    text-decoration: underline;
+    line-height: 50px;
+}
+/*Responsiveness*/
+
+@media screen and (max-width: 480px){
+    img{
+        width:30px;
+        height:30px;
+    }
+    p{
+       font-size:20px;
+    }
+    .menu button{
+        padding: 5px 10px;    
+    }
+    .content p{
+        padding:15px;
+    }
+    table{
+        padding:15px;
+    }
+    td{
+        padding:5px;
+    }
+    .btn-2{
+        margin:15px;
+    }
+    .heading{
+        padding-top:15px;
+        padding-bottom:10px;
+        font-size:25px;
+    }
+    #message{
+        width:150px;
+        height:100px;
+        margin-left:250px;
+        position: relative;
+        top:-140px;        
+    }
+    .z{
+        padding:5px;
+        margin-left:40px;
+        height:20px;
+    }
+    .enquire button{
+        margin-left:190px;
+        position: relative;
+        top:-50px;
+        width:100px;
+    }
+    .enquire{
+        margin-top:50px;
+    }
+    .footer p{
+        padding-top:20px;
+    }
+    .footer a{
+        font-size:20px;
+        padding:2px;
+    }
+    .fundisha{
+        font-size:25px;
+    }
+
+}
+@media screen and (max-width: 380px){
+    #message{
+        width:150px;
+        height:80px;
+        margin-left:190px;
+        position: relative;
+        top:-140px;        
+    }
+    .z{
+        padding:5px;
+        margin-left:10px;
+    }
+    .enquire button{
+        margin-left:130px;
+        position: relative;
+        top:-50px;
+    }
+}
+@media screen and (max-width: 320px){
+    .z{
+        width:150px;
+        padding:5px;
+    }
+    #message{
+        width:110px;
+        height:100px;
+    }
+}
+@media screen and (min-width: 481px) and (max-width: 550px){
+    img{
+        width:40px;
+        height:40px;
+    }
+    p{
+        font-size:30px;
+    }
+    .menu button{
+        font-size:20px;
+        padding: 5px 10px;    
+    }
+    .content p{
+        padding:15px;
+    }
+    table{
+        padding:15px;
+    }
+    .content{
+        margin-right:auto;
+        margin-left:auto;
+        margin-bottom:20px;
+    }
+    .btn-2{
+        margin:15px;
+        font-size:20px;
+    }
+    th{
+        font-size:20px;
+    }
+    td{
+        font-size:20px;
+    }
+    input{
+        padding:5px;
+    
+    }
+    #message{
+        position: relative;
+        left:200px;
+        top:-130px;
+        height:100px;
+    }
+    .enquire button{
+        margin-left:180px;
+        position: relative;
+        top:-50px;
+        padding:10px 15px;
+        font-size: 20px;;
+    }
+    .heading{
+        font-size:30px;
+    }
+    .footer p{
+        padding-top:20px;
+    }
+    .footer a{
+        font-size:25px;
+        padding: 5px;
+    }
+    .fundisha{
+        font-family:'quicksand';
+        font-weight:normal;
+    }
+    .copyright{
+        font-size: 20px;
+    }
+    
+}
+
+
+@media screen and (min-width: 551px) and (max-width: 767px){
+    img{
+        width:40px;
+        height:40px;
+    }
+    p{
+        font-size:40px;
+       
+    }
+    .menu button{
+        padding:10px;
+        font-size:25px;
+    }
+    .content p{
+        padding:20px;
+        font-size:30px;
+    }
+    table{
+        padding:20px;
+    }
+    th{
+        font-size:20px;
+        padding:10px;
+    }
+    td{
+        font-size:20px;
+        padding:10px;
+    }
+    .btn-2{
+        margin:20px;
+        font-size:20px;
+    }
+    .content{
+        margin-bottom:20px;
+    }
+    .heading{
+        font-size:30px;
+        padding:5px;
+    }
+    .z{
+        padding:5px;
+        margin-left:150px;        
+    }
+    #message{
+        margin-left:400px;
+        position: relative;
+        top:-130px;
+        width:100px;
+        padding:50px;
+    }
+    .input{
+        margin-right:auto;
+        margin-left:auto;
+    }
+    .enquire button{
+        margin-left:280px;
+        position:relative;
+        top:-50px;
+        font-size:20px;
+    }
+    .footer p{
+        padding-top:20px;
+        font-size:20px;
+    }
+    .footer a{
+        font-size:25px;
+        padding:5px;
+    }
+    .fundisha{
+        font-size: 20px;
+    }
+}
+@media screen and (width:551px){
+    .z{
+        padding:5px;
+        margin-left:80px;        
+    }
+    #message{
+        margin-left:300px;
+        position: relative;
+        top:-130px;
+        width:100px;
+        padding:50px;
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 1024px){
+    img{
+        width:40px;
+        height:40px;
+    }
+    .maths{
+        font-size:30px;
+        position: relative;
+        bottom:-50px;
+    }
+    .menu button{
+        font-size:20px;
+        padding:5px 10px;
+        position: relative;
+        top:100px;
+    }
+    .content{
+        width:524px;
+        height:400px;
+        position: relative;
+        top:100px;
+    }
+    .btn-2{
+        position: absolute;
+        left:0;
+        bottom: 0;
+        margin:10px;
+        font-size:20px;
+    }
+    .content p{
+        padding-top:20px;
+        font-size:25px;
+    }
+    table{
+        padding-top:20px;
+    }
+    th{
+        font-size:20px;
+        padding:5px;
+    }
+    td{
+        font-size:20px;
+        padding: 5px;
+    }
+    .enquire{
+        margin-left:525px;
+        border-top:none;
+        border-bottom:none;
+        position: relative;
+        top:-350px;
+    }
+    .heading{
+        border-top: none;
+        font-size: 30px;
+        margin-bottom: 10px;
+    }
+    input{
+        margin-right:auto;
+        margin-left:auto;
+    }
+    .enquire button{
+        margin-left:50px;
+        margin-top:20px;
+        font-size:20px;
+    }
+    .z{
+        padding:10px;
+        margin-top:10px;
+    }
+    #message{
+        border-radius: 5px;
+        padding:10px;
+        height:100px;
+    }
+    .footer p{
+        padding:20px;
+        font-size:30px;
+    }
+    .footer a{
+        font-size:25px;
+        padding:5px;
+    }
+}
+@media screen and (min-width: 850px) and (max-width:939px){
+    .enquire button{
+       margin-left:120px;
+    }
+    input{
+        width:200px;
+    }
+}
+@media screen and (min-width: 940px) and (max-width:1024px){
+    .enquire button{
+        margin-left:150px;
+     }
+     input{
+         width:300px;
+     }
+}
+@media screen and (min-width: 1025px) and (max-width: 1280px){
+    img{
+        width:50px;
+        height:50px;
+    }
+    .maths{
+        font-size: 40px;
+    }
+    .content{
+        width:598px;
+    }
+    .menu button{
+        font-size:25px;
+    }
+    table{
+        padding:20px;
+    }
+    td,
+    th{
+        font-size:20px;
+        padding:10px;
+    }
+    .enquire{
+        border-bottom: none;
+        margin-left:600px;
+        position: relative;
+        top:-370px;
+    }
+    .heading{
+        border-top:none;
+        font-size:30px;
+        padding:20px;
+    }
+    #message,
+    .z{
+        padding:10px;
+        margin:20px;
+        margin-right: auto;
+        margin-left: auto;
+        width:250px;
+    }
+    #message{
+        height:200px
+    }
+    .enquire button{
+        margin-left:120px;
+        font-size:25px;
+    }
+    .footer p{
+        font-size: 25px;
+        padding:20px;
+    }
+    .footer img{
+        width:30px;
+        height:30px;
+    }
+    .footer a {
+        font-size:30px;
+        padding:5px;
+    }
+    .fundisha{
+        font-size: 30px;
+    }
+    .copyright{
+        font-size: 25px;
+    }
+}
+@media screen and (min-width: 1025px) and (max-width: 1179px){
+    .content{
+        width:670px;
+        height:600px;
+    }
+    .content p{
+        font-size:35px;
+        padding:20px;
+    }
+    .menu button{
+        font-size:25px;
+        padding:15px;
+    }
+    .btn-2{
+        font-size:20px;
+        margin:20px;
+        position: absolute;
+        left:0;
+        bottom: 0;
+    }
+    th,
+    td{
+        font-size:22px;
+        padding:20px;
+    }
+    .enquire{
+        margin-left:700px;
+        position: relative;
+        top:-650px;
+    }
+    .z,
+    #message{
+        padding:20px;
+    }
+    .enquire button{
+        margin-top:50px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+@media screen and (min-width:1180px) and (max-width:1280px){
+    .content p {
+        font-size:30px;
+        padding:20px;
+    }
+    th,
+    td{
+        font-size:25px;
+    }
+    .content{
+       width:694px;
+       height:500px;
+       position: relative;
+   }
+   .btn-2{
+       font-size:25px;
+       position: absolute;
+       left:0;
+       bottom: 0;
+       margin:20px;
+   }
+   .menu button{
+       padding:18px;
+   }
+   #message,
+   .z{
+       width:380px;
+       margin-right:25px;
+       padding:20px;
+   }
+   .enquire button{
+       margin-left: 300px;
+   }
+   .enquire{
+       position: relative;
+       top:-600px;
+   }
+   .heading{
+       font-size:35px;
+    }
+}
+@media screen and (min-width: 1281px){
+    img{
+        width:50px;
+        height:50px;
+    }
+    .maths{
+        font-size:40px;
+    }
+    .content{
+        width:775px;
+        height:600px;
+        position: relative;
+    }
+    .content p{
+        font-size:30px;
+        padding:20px;
+        padding-top:80px;
+    }
+    .menu button{
+        font-size:30px;
+        padding:15px;
+    }
+    .btn-2{
+        font-size:25px;
+        position: absolute;
+        left:0;
+        bottom: 0;
+        margin:20px;
+    }
+    .heading{
+        border-top:none;
+        font-size:30px;
+    }
+    .enquire{
+        border-bottom:none;
+        margin-left:850px;
+        position: relative;
+        top:-600px;
+    }
+    .z,
+    #message{
+        padding:20px;
+        margin:15px;
+        width:300px;
+    }
+    #message{
+        height:400px;
+    }
+    .enquire button{
+        margin-left:120px;
+        font-size:25px;
+        margin-top:20px;
+    }
+    .footer{
+        height:750px;
+    }
+    .footer p{
+        font-size:30px;
+        padding:20px;
+    }
+    .footer img{
+        width:40px;
+        height:40px;
+    }
+    .footer a{
+        font-size:25px;
+        padding:10px;
+    }
+}
