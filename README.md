@@ -64,4 +64,4 @@ Did someone’s blog post spark off a wonderful idea or give you a solution to n
 It's powerful to always give credit.
 
 ## LICENSE
-MIT
+[![license](https://img.shields.io/github/license/DAVFoundation/captain-n3m0.svg?style=flat-square)](https://github.com/DAVFoundation/captain-n3m0/blob/master/LICENSE)
