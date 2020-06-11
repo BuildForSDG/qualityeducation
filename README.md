@@ -5,7 +5,7 @@
 
 ## About
 
-https://github.com/BuildForSDG/team-260-qualityeducation/blob/feature/src/Assets/screenshots/images.jpg 
+![images.jpg](https://github.com/BuildForSDG/team-260-qualityeducation/blob/feature/src/Assets/screenshots/images.jpg) 
 
 Once this repo has been setup on Codacy by the TTL, replace the above badge with the actual one from the Codacy dashboard, and add the code coverage badge as well. This is mandatory
 
