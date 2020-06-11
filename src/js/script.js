@@ -4,8 +4,8 @@ $(document).ready(function () {
     $("#register").click(function () {
         var allLetters = /^[a-zA-Z]+$/;
         var letter = /[a-zA-Z]/;
-        var name = document.getElementById("fname").value;
-        var name = document.getElementById("lname").value;
+        var fname = document.getElementById("fname").value;
+        var lname = document.getElementById("lname").value;
         var email = document.getElementById("email").value;
         var number = document.getElementById("tele").value;
         var password = document.getElementById("password").value;
