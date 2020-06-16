@@ -7,7 +7,7 @@ body{
 }
 .menu p{
     display: inline-block;
-    padding: 10px;
+    padding: 5px;
     transition: ease-in 0.3s;
 }
 .menu p:hover{
@@ -40,7 +40,6 @@ img[src="Imgs/registered.jpg"]{
 }
 .footer{
     background-color: black;
-    opacity: 0.7;
     text-align: center;
     color:white;
     padding: 20px;
@@ -80,10 +79,6 @@ img[src="Imgs/registered.jpg"]{
 }
 
 @media screen and (max-width: 480px){
-    .menu{
-        display: inline-block;
-        padding: 10px;
-    }
     .menu a{
         text-decoration: none;
         margin: 15px;
@@ -108,8 +103,6 @@ img[src="Imgs/registered.jpg"]{
         text-align: center;
         border-radius: 15px;
         border-width: thin;
-        width: 300px;
-        height: 25px;
         font-size: 15px;
         font-style: 'quicksand';
         font-weight: normal;
@@ -118,32 +111,27 @@ img[src="Imgs/registered.jpg"]{
         padding: 10px;
     } 
     .footer a{
-        font-size: x-small;
-        position: relative;
-        display: inline-block;
+        font-size:20px;
+        padding:2px;
     }
     .footer p{
-      font-size: xx-small;    
+      font-size: 20px;    
   } 
   
   .section1 img{
-      height: 15px;
-      width: 15px;
-      display: inline-block;
+      height: 20px;
+      width: 20px;
   }
 }
    
 
 @media screen and (max-width: 276px){
-    .menu{
-        display: inline-block;
-        padding: 0px;
-    }
+    
     .menu p{
         text-decoration: none;
-        margin: 0.5px;
+        margin: 1px;
         color: white;
-        font-size: 8px;
+        font-size: 15px;
     }
     .mobileview{
         display: none;
@@ -156,30 +144,27 @@ img[src="Imgs/registered.jpg"]{
     .main input{
         text-align: center;
         border-radius: 10px;
-        border-width: thin;
-        width: 50px;
-        height: 15px;
+        border:none;
         font-size: 10px;
         font-style:'quicksand';
         font-weight: normal;
         margin-left: -22px;
     }
+    .footer p{
+        font-size: 10px;
+    }
 }
 @media screen and (max-width:320px){
-    .menu{
-        display: inline-block;
-        padding: 0px;
-    }
     .menu a{
         margin: 1px;
         color: white;
-        font-size: x-small;
+        font-size: 15px;
     }
     .menu img{
         float: left;
         margin-top: 5px;
-        height: 35px;
-        width: 35px;
+        height: 20px;
+        width: 20px;
     }
     .mobileview{
         display: none;
@@ -192,30 +177,52 @@ img[src="Imgs/registered.jpg"]{
     .main input{
         text-align: center;
         border-radius: 15px;
-        border-width: thin;
+        border:none;
         width: 200px;
         height: 15px;
         font-size: 10px;
         font-style:'quicksand';
         font-weight: normal;
     }
-    .footer{
-        padding: 10px;
-    } 
     .footer a{
-        font-size: x-small;
-        position: relative;
-        display: inline-block;
+       font-size:10px;
     }
     .footer p{
-      font-size: xx-small;    
+      font-size:10px;    
   } 
   
   .section1 img{
-      height: 15px;
-      width: 15px;
-      display: inline-block;
+      height: 20px;
+      width: 20px;
   }
+}
+
+@media screen and (min-width: 321px) and (max-width: 480px){
+    .menu img{
+        width:40px;
+        height:40px;
+    }
+    .menu a{
+        font-size: 15px;
+    }
+    .main input{
+        width:200px;
+        border:none;
+        font-size: 10px;
+        font-style:'quicksand';
+        font-weight: normal;
+    }
+    .footer p{
+        font-size:15px;
+    }
+    .section1 img{
+        width:20px;
+        height:20px;
+    }
+    .footer a{
+        font-size: 15px;
+        padding: 5px;
+    }
 }
    
 
@@ -226,7 +233,7 @@ img[src="Imgs/registered.jpg"]{
   .menu p{
       text-decoration: none;
       color:white;
-      font-size: 20px;
+      font-size: 18px;
       margin: 15px;
   }
   .menu img{
@@ -238,13 +245,19 @@ img[src="Imgs/registered.jpg"]{
       padding: 20px;
       margin: 30px;
   }
+  .main input{
+    border:none;
+    font-size: 10px;
+    font-style:'quicksand';
+    font-weight: normal;
+  }
   .footer a{
-      font-size: 30px;
+      font-size: 15px;
+      padding: 5px;
   }
   .footer p{
-    font-size: 25px;
-}
-
+    font-size: 15px;
+  }
    }
 
 @media screen and (min-width: 768px) and (max-width: 1024px){
@@ -257,11 +270,20 @@ img[src="Imgs/registered.jpg"]{
         margin: 30px;
     }
     .main p{
-        font-size: 30px;
+        font-size: 18px;
+        text-decoration: none;
+        color:white;
+        margin: 15px;
+    }
+    .main input{
+    border:none;
+    font-size:15px;
+    font-style:'quicksand';
+    font-weight: normal;   
     }
     .menu img{
-        width: 70px;
-        height: 70px;
+        width: 50px;
+        height: 50px;
     }
     .menu a{
         text-decoration: none;
@@ -271,7 +293,8 @@ img[src="Imgs/registered.jpg"]{
         margin-left: 60px;
     }
     .footer a{
-        font-size: 30px;
+        font-size: 20px;
+        padding: 5px;
     }
     
 }
@@ -286,16 +309,29 @@ img[src="Imgs/registered.jpg"]{
         margin: 75px;
     }
     .menu img{
-        width: 40px;
-        height: 40px;
+        width: 50px;
+        height: 50px;
     }
     .main{
         padding: 30px;
         margin: 20px;
         text-align: center;
     }
+    .main p{
+        font-size: 18px;
+        text-decoration: none;
+        color:white;
+        margin: 15px;
+    }
+    .main input{
+        border:none;
+        font-size:15px;
+        font-style:'quicksand';
+        font-weight: normal; 
+    }
     .footer a{
-        font-size: 30px;
+        font-size: 20px;
+        padding: 5px;
     }
 }
   @media screen and (min-width: 1281px){
@@ -316,14 +352,29 @@ img[src="Imgs/registered.jpg"]{
           padding: 30px;
           text-align: center;
       }
+      .main p{
+        font-size: 18px;
+        text-decoration: none;
+        color:white;
+        margin: 15px;
+    }
+    .main input{
+        border:none;
+        font-size:20px;
+        padding: 10px;
+        font-style:'quicksand';
+        font-weight: normal; 
+    }
       .footer a{
-        font-size: 30px;
+        font-size: 20px;
+        padding:5px;
     } 
     .footer p{
-        font-size: 30px;
+        font-size: 25px;
     }
-    .footer{
-        padding: 30px;
+    .footer img{
+        width:30px;
+        height:30px;
     }
   }
 
