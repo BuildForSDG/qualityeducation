@@ -1,11 +1,14 @@
-A one-liner phrase describing this project or app
+ 
 
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/11435e6eaebe4cd884be1f40de20c221)](https://app.codacy.com/gh/BuildForSDG/team-260-qualityeducation?utm_source=github.com&utm_medium=referral&utm_content=BuildForSDG/team-260-qualityeducation&utm_campaign=Badge_Grade_Settings)
-
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/673f58ea07ad4146bbf479c131471326)](https://app.codacy.com/gh/BuildForSDG/team-260-qualityeducation?utm_source=github.com&utm_medium=referral&utm_content=BuildForSDG/team-260-qualityeducation&utm_campaign=Badge_Grade_Dashboard)
 
 ## About
 
-What is this project about. Ok to enrich here or the section above it with an image. 
+## FUNDISHA 
+An online education platform that offers tutoring and job placement for teachers.
+Solves the problem of teacher student ratio in developing countries.
+
+![images.jpg](https://github.com/BuildForSDG/team-260-qualityeducation/blob/feature/src/Assets/screenshots/images.jpg) 
 
 Once this repo has been setup on Codacy by the TTL, replace the above badge with the actual one from the Codacy dashboard, and add the code coverage badge as well. This is mandatory
 
@@ -64,4 +67,4 @@ Did someone’s blog post spark off a wonderful idea or give you a solution to n
 It's powerful to always give credit.
 
 ## LICENSE
-MIT
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)

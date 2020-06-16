@@ -2,10 +2,9 @@
 //SIGN UP FORM VALIDATION
 $(document).ready(function () {
     $("#register").click(function () {
-        var allLetters = /^[a-zA-Z]+$/;
         var letter = /[a-zA-Z]/;
-        var name = document.getElementById("fname").value;
-        var name = document.getElementById("lname").value;
+        var fname = document.getElementById("fname").value;
+        var lname = document.getElementById("lname").value;
         var email = document.getElementById("email").value;
         var number = document.getElementById("tele").value;
         var password = document.getElementById("password").value;
@@ -14,14 +13,14 @@ $(document).ready(function () {
         var gender = document.getElementById("gender").value;
 
         if (fname.length > 3) {
-            console.log(fname);
+            fname=true;
         } else {
-            console.log('Name invalid')
+            fname='Name is invalid';
         }
         if (lname.length > 3) {
-            console.log(lname);
+            lname=true;
         } else {
-            console.log('Name invalid')
+            lname='Name is invalid';
         }
         if (email.indexOf("@") < 1 || email.lastIndexOf(".") < email.indexOf("@") + 2 || email.lastIndexOf(".") + 2 >= email.length) {
             invalid.push("*Email");
